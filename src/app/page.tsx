@@ -46,33 +46,33 @@ const Home: React.FC = () => {
 
   const router = useRouter();
 
-  const handleClick = () => {
+  const function1 = useCallback(() => {
+    setShowFunction1((prev) => !prev);
+  }, []);
+
+  const function2 = useCallback(() => {
+    return <div className=""><BinaryLogo2/></div>;
+  }, []);
+
+  const function3 = useCallback(() => {
+    return <div className=" "><BinaryLogo/></div>;
+  }, []);
+
+  // Delay page navigation by 1.5 seconds
+  const function4 = useCallback(() => {
+    setTimeout(() => {
+      router.push('/home');
+    }, 1500); // Page route will happen after 1.5 seconds
+  }, [router]);
+
+   const handleClick = useCallback(() => {
     setIsNavigating(true);
     function1();
     function2();
     function3();
     function4(); // Start the navigation process after 1.5 seconds
-  };
-
-  const function1 = () => {
-    setShowFunction1(!showFunction1);
-  };
-
-  const function2 = () => {
-    return <div className=""><BinaryLogo2/></div>;
-  };
-
-  const function3 = () => {
-    return <div className=" "><BinaryLogo/></div>;
-  };
-
-  // Delay page navigation by 1.5 seconds
-  const function4 = () => {
-    setTimeout(() => {
-      router.push('/home');
-    }, 1500); // Page route will happen after 1.5 seconds
-  };
-
+  }, [function1, function2, function3, function4]);
+  
   const handleEnterKeyPress = useCallback(
     (event: React.KeyboardEvent<HTMLButtonElement>) => {
       if (event.key === 'Enter') {
