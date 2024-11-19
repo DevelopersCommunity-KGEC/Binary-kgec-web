@@ -1,46 +1,48 @@
-import Slider from "react-slick";
-import BinaryText from "../Animations/BinaryText";
-import PageSection from "@/hooks/PageSection";
+import Slider from 'react-slick';
+import BinaryText from '../Animations/BinaryText';
+import PageSection from '@/hooks/PageSection';
 // import useTextScramble from "../Animations/text";
-import styled from "styled-components";
-import * as demoProfileImg from "@public/images/demoprofile.png";
-import * as demoProfileImg2 from "@public/images/demoprofile.png";
-import Image from "next/image";
-import React, { Component } from "react";
+import styled from 'styled-components';
+import * as demoProfileImg from '@public/images/demoprofile.png';
+import * as demoProfileImg2 from '@public/images/demoprofile.png';
+import Image from 'next/image';
+import React, { Component } from 'react';
 // import { motion, useMotionValue, useTransform } from "framer-motion";
-import Link from "next/link";
-import { Linkedin, Twitter } from "lucide-react";
-import { buttonVariants } from "../ui/button";
-import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { Linkedin, Twitter } from 'lucide-react';
+import { buttonVariants } from '../ui/button';
+import { cn } from '@/lib/utils';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import logo from "@public/images/binarylogo2.png"
-import { TypeAnimation } from "react-type-animation";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import logo from '@public/images/binarylogo2.png';
+import { TypeAnimation } from 'react-type-animation';
 
+// Custom arrow component for previous
+const CustomPrevArrow: React.FC = ({ onClick }: any) => (
+  <div
+    className="custom-arrow absolute -left-[35px] top-1/2 -translate-y-1/2 transform"
+    onClick={onClick}
+  >
+    <FaChevronLeft size={50} color="#fff" />
+  </div>
+);
 
-  // Custom arrow component for previous
-  const CustomPrevArrow: React.FC = ({ onClick }: any) => (
-    <div className="custom-arrow absolute -left-[35px] top-1/2 transform -translate-y-1/2" onClick={onClick}>
-      <FaChevronLeft size={50} color="#fff" />
-    </div>
-  );
-  
-  const CustomNextArrow: React.FC = ({ onClick }: any) => (
-    <div
-      className="custom-arrow absolute -right-[35px] top-1/2 transform -translate-y-1/2"
-      onClick={onClick}
-    >
-      <FaChevronRight size={50} color="#fff" />
-    </div>
-  );
+const CustomNextArrow: React.FC = ({ onClick }: any) => (
+  <div
+    className="custom-arrow absolute -right-[35px] top-1/2 -translate-y-1/2 transform"
+    onClick={onClick}
+  >
+    <FaChevronRight size={50} color="#fff" />
+  </div>
+);
 /**
-* 3D Flip
-* Created By Joshua Guo
-*
-* @framerSupportedLayoutWidth fixed
-* @framerSupportedLayoutHeight fixed
-*/
+ * 3D Flip
+ * Created By Joshua Guo
+ *
+ * @framerSupportedLayoutWidth fixed
+ * @framerSupportedLayoutHeight fixed
+ */
 
 interface MemberComponentProps {
   imgurl: {
@@ -51,7 +53,7 @@ interface MemberComponentProps {
   name: string;
   position?: string;
   linkedinUrl: string;
-  twitterUrl:string;
+  twitterUrl: string;
 }
 
 // Styled component for the section
@@ -82,20 +84,18 @@ border-radius: 20px;
   }
 `;
 const ProductCard = styled.div`
+  .container {
+    margin: 0 auto;
+  }
 
-.container{
-  margin: 0 auto;
-} 
-
-.card {
+  .card {
     position: relative;
     margin: 0 auto;
     width: fit-content;
     height: 350px;
- 
+
     border-radius: 20px;
     overflow: hidden;
-    
   }
   .card:before {
     content: '';
@@ -114,7 +114,6 @@ const ProductCard = styled.div`
   }
 
   .card:after {
-
   }
   .card .contentBx {
     position: absolute;
@@ -126,8 +125,7 @@ const ProductCard = styled.div`
     z-index: 10;
   }
 
-
-    .card .contentBx h2 {
+  .card .contentBx h2 {
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
@@ -148,8 +146,6 @@ const ProductCard = styled.div`
     padding-bottom: 0;
   }
 
-  
-
   .card:hover .contentBx .color {
     opacity: 1;
     visibility: visible;
@@ -164,56 +160,53 @@ const ProductCard = styled.div`
     text-align: center;
     transition: 1s;
     z-index: 90;
-}
+  }
 
-.container .card:hover .contentBx {
+  .container .card:hover .contentBx {
     height: 210px;
-}
+  }
 
-.container .card .contentBx h2 {
+  .container .card .contentBx h2 {
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
-}
+  }
 
-.container .card .contentBx .size,
-.container .card .contentBx .color {
+  .container .card .contentBx .size,
+  .container .card .contentBx .color {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 8px 20px;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
     visibility: hidden;
-}
+  }
 
-.container .contentBx .size {
+  .container .contentBx .size {
     opacity: 1;
     visibility: visible;
-    transition-delay: .5s;
-}
+    transition-delay: 0.5s;
+  }
 
-.container .card:hover .contentBx .color {
+  .container .card:hover .contentBx .color {
     opacity: 1;
     visibility: visible;
-    transition-delay: .6s;
-}
+    transition-delay: 0.6s;
+  }
 
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
+  .container .card .contentBx .size h3,
+  .container .card .contentBx .color h3 {
     color: white;
     font-weight: 300;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-right: 10px;
-}
+  }
 
-
-
-
-.container .card .contentBx a {
+  .container .card .contentBx a {
     display: inline-block;
     padding: 10px 20px;
     background: transparent;
@@ -224,16 +217,16 @@ const ProductCard = styled.div`
     color: #fff;
     opacity: 0;
     transform: translateY(50px);
-    transition: .5s;
-}
+    transition: 0.5s;
+  }
 
-.container .card:hover .contentBx a {
+  .container .card:hover .contentBx a {
     opacity: 1;
     transform: translateY(0px);
-    transition-delay: .7s;
-}   
+    transition-delay: 0.7s;
+  }
 
-.container .card {
+  .container .card {
     margin: 0 auto; // Center the card within the container
   }
 `;
@@ -241,74 +234,79 @@ const ProductCard = styled.div`
 const ImageContainer = styled.div`
   width: 15rem;
   margin: 0 auto;
- scale: 2.7;
+  scale: 2.7;
   border-radius: 20px;
   position: relative;
   top: 100px;
   transition: transform 0.7s ease;
-cursor:pointer;
- 
+  cursor: pointer;
 `;
 
 // MemberComponent component definition
-const MemberComponent: React.FC<MemberComponentProps> = ({ imgurl, name = "", position = " " ,linkedinUrl="",twitterUrl=""}) => {
- 
-  return (<><div className="flex justify-center  items-center">
-  <Item className=" w-fit rounded-sm transition-transform duration-300 flex justify-center flex-col  items-center  image-container md:scale-[0.9] scale-75   ">
-  <ProductCard className="flex justify-center items-center w-fit">
-  <div className="container w-fit">
-    <div className="card w-fit bg-neutral-800/60 shadow-md  shadow-green-700/75">
-    <ImageContainer className=" py-3 md:py-7 w-[8rem] flex flex-col items-center justify-center image-container ">
-  
-    <Image
-                className="rounded-full p-1 bg-neutral-800 overflow-hidden border-solid border-2 hover: border-white/90"
-                src={imgurl.src} // Use the imported image URL here
-                alt={name}
-                width={imgurl.width} // Specify the width
-                height={imgurl.height} // Specify the height
-              />
-</ImageContainer>
-      <div className="imgBx">
-     
-      </div>
-      <div className="contentBx">
-      <div className="mx-auto text-center text-md md:text-lg font-pixelate text-white">
-      {name}
-      </div>
-        <div className="flex flex-row mr-10 ml-10 justify-center items-center">
-        <Link
-              href={twitterUrl}
-              className={cn(buttonVariants({ variant: "link" }), "text-white  hover:text-green-600")}
-            >
-              <Twitter />
-            </Link>
-  
-            <Link
-              href={linkedinUrl}
-              className={cn(buttonVariants({ variant: "link" }), "text-white hover:text-green-600")}
-            >
-              <Linkedin />
-            </Link>          
-        </div>
-        
-      </div>
-      <div className="text-center relative md:-bottom-[180px] -bottom-[210px]  font-pixelate justify-center text-green-500 text-lg ">
-      {position}
-    </div>
+const MemberComponent: React.FC<MemberComponentProps> = ({
+  imgurl,
+  name = '',
+  position = ' ',
+  linkedinUrl = '',
+  twitterUrl = '',
+}) => {
+  return (
+    <>
+      <div className="flex items-center justify-center">
+        <Item className="image-container flex w-fit scale-75 flex-col items-center justify-center rounded-sm transition-transform duration-300 md:scale-[0.9]">
+          <ProductCard className="flex w-fit items-center justify-center">
+            <div className="container w-fit">
+              <div className="card w-fit bg-neutral-800/60 shadow-md shadow-green-700/75">
+                <ImageContainer className="image-container flex w-[8rem] flex-col items-center justify-center py-3 md:py-7">
+                  <Image
+                    className="hover: overflow-hidden rounded-full border-2 border-solid border-white/90 bg-neutral-800 p-1"
+                    src={imgurl.src} // Use the imported image URL here
+                    alt={name}
+                    width={imgurl.width} // Specify the width
+                    height={imgurl.height} // Specify the height
+                  />
+                </ImageContainer>
+                <div className="imgBx"></div>
+                <div className="contentBx">
+                  <div className="text-md mx-auto text-center font-pixelate text-white md:text-lg">
+                    {name}
+                  </div>
+                  <div className="ml-10 mr-10 flex flex-row items-center justify-center">
+                    <Link
+                      href={twitterUrl}
+                      className={cn(
+                        buttonVariants({ variant: 'link' }),
+                        'text-white hover:text-green-600',
+                      )}
+                    >
+                      <Twitter />
+                    </Link>
 
-    </div>
+                    <Link
+                      href={linkedinUrl}
+                      className={cn(
+                        buttonVariants({ variant: 'link' }),
+                        'text-white hover:text-green-600',
+                      )}
+                    >
+                      <Linkedin />
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative -bottom-[210px] justify-center text-center font-pixelate text-lg text-green-500 md:-bottom-[180px]">
+                  {position}
+                </div>
+              </div>
+            </div>
 
-   
-  </div>
-
-<div className="absolute left-2 top-6"> <Image
-              className="glitch"
-              src={logo}
-              alt="Binary Hackathon"
-              width={60}
-            /></div>
-  
-  </ProductCard></Item></div> </>
+            <div className="absolute left-2 top-6">
+              {' '}
+              <Image className="glitch" src={logo} alt="Binary Hackathon" width={60} />
+            </div>
+          </ProductCard>
+        </Item>
+      </div>{' '}
+    </>
   );
 };
 
@@ -321,10 +319,10 @@ const Mentors: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-   
+
     nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow/>,
-    
+    prevArrow: <CustomPrevArrow />,
+
     responsive: [
       {
         breakpoint: 2224,
@@ -357,59 +355,117 @@ const Mentors: React.FC = () => {
     ],
   };
 
-
-
   return (
-<PageSection id="team">
+    <PageSection id="team">
       <div className="mt-[96px] md:mt-[116px]">
-        <BinaryText className="text-white font-pixelate text-[2rem] md:text-[3rem] font-bold" reveal>
-        <div className="overflow-x-hidden w-full pt-5 sm:hidden text-xl shad relative">
-  <h2 className=" flex flex-row max-w-sm md:max-w-max mx-0  font-pixelate  text-left font-bold mb-10 pt-4 md:pt-0 uppercase md:w-max relative">
-  <span className="flex-none text-green-500 opacity-85 font-bold tracking-wider pl-1">
-      06.
-    </span>
-    <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider pl-2">
-   Team
-    </span>
-    
-    <div className="flex flex-col item-center justify-center ">
-    
-    <div className="right-full  transform h-[1px] w-[70vh] bg-[#1d6339] mt-[10px] ml-4"></div></div>
-  </h2>
-</div>
-          <div className="overflow-x-hidden w-full pt-5 sm:block hidden shad relative">
-  <h2 className=" flex flex-row max-w-sm md:max-w-max mx-0  font-pixelate  text-left font-bold mb-10 pt-4 md:pt-0 md:w-max relative">
-  <span className="flex-none text-green-500 opacity-85 font-bold tracking-wider pl-4">
-      06.
-    </span>
-    <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider pl-4">
-      Team
-    </span>
-   
-    <div className="flex flex-col item-center justify-center ">
-    
-    <div className="right-full top-[55%] transform h-[1px] w-[70vh] bg-[#1d6339] mt-[25px] ml-4"></div></div>
-  </h2>
-</div>
-          
+        <BinaryText
+          className="font-pixelate text-[2rem] font-bold text-white md:text-[3rem]"
+          reveal
+        >
+          <div className="shad relative w-full overflow-x-hidden pt-5 text-xl sm:hidden">
+            <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold uppercase md:w-max md:max-w-max md:pt-0">
+              <span className="flex-none pl-1 font-bold tracking-wider text-green-500 opacity-85">
+                06.
+              </span>
+              <span className="flex-none pl-2 font-bold tracking-wider text-gray-200 opacity-85">
+                Team
+              </span>
+
+              <div className="item-center flex flex-col justify-center">
+                <div className="right-full ml-4 mt-[10px] h-[1px] w-[70vh] transform bg-[#1d6339]"></div>
+              </div>
+            </h2>
+          </div>
+          <div className="shad relative hidden w-full overflow-x-hidden pt-5 sm:block">
+            <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold md:w-max md:max-w-max md:pt-0">
+              <span className="flex-none pl-4 font-bold tracking-wider text-green-500 opacity-85">
+                06.
+              </span>
+              <span className="flex-none pl-4 font-bold tracking-wider text-gray-200 opacity-85">
+                Team
+              </span>
+
+              <div className="item-center flex flex-col justify-center">
+                <div className="right-full top-[55%] ml-4 mt-[25px] h-[1px] w-[70vh] transform bg-[#1d6339]"></div>
+              </div>
+            </h2>
+          </div>
         </BinaryText>
-        <div className="font-pixelate text-green-500 md:text-[1.5rem] font-bold mt-7 text-center">
+        <div className="mt-7 text-center font-pixelate font-bold text-green-500 md:text-[1.5rem]">
           <TypeAnimation sequence={[500, `Our dedicated team`]} speed={80} />
         </div>
-        <div className="mt-20 md:mt-10 mx-auto">
-        <Slider {...sliderSettings} className="lg:mr-[4%] mr-8 ml-8 flex justify-center items-center lg:ml-[4%]">
-          <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 1" position="Position" twitterUrl="" linkedinUrl="" />
-          <MemberComponent imgurl={{ src: demoProfileImg2.default.src, width: 50, height: 50 }} name="Demo Profile 2" position="Position" twitterUrl="" linkedinUrl="" />
-         <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 3" position="Position"  twitterUrl="" linkedinUrl=""/>
-         <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 4" position="Position"  twitterUrl="" linkedinUrl=""/>
-     <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 5" position="Position"  twitterUrl="" linkedinUrl=""/>
-         <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 6" position="Position"  twitterUrl="" linkedinUrl=""/>
-          <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 7" position="Position"  twitterUrl="" linkedinUrl=""/>
-           <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 8" position="Position"  twitterUrl="" linkedinUrl=""/>
-           <MemberComponent imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }} name="Demo Profile 9" position="Position"  twitterUrl="" linkedinUrl=""/>
+        <div className="mx-auto mt-20 md:mt-10">
+          <Slider
+            {...sliderSettings}
+            className="ml-8 mr-8 flex items-center justify-center lg:ml-[4%] lg:mr-[4%]"
+          >
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 1"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg2.default.src, width: 50, height: 50 }}
+              name="Demo Profile 2"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 3"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 4"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 5"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 6"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 7"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 8"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
+            <MemberComponent
+              imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
+              name="Demo Profile 9"
+              position="Position"
+              twitterUrl=""
+              linkedinUrl=""
+            />
 
-          {/* ... other MemberComponent instances */}
-        </Slider></div>
+            {/* ... other MemberComponent instances */}
+          </Slider>
+        </div>
       </div>
     </PageSection>
   );

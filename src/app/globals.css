@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "SFPixelate";
-  src: url("/fonts/SFPixelate.ttf");
+  font-family: 'SFPixelate';
+  src: url('/fonts/SFPixelate.ttf');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: "AnultraSlabRegular";
-  src: url("/fonts/SFPixelate-Bold.ttf");
+  font-family: 'AnultraSlabRegular';
+  src: url('/fonts/SFPixelate-Bold.ttf');
   font-weight: 700;
   font-display: swap;
   font-style: bold;
 }
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -24,63 +24,63 @@
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
- 
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -113,14 +113,14 @@
 .text {
   font-weight: 100;
   font-size: 28px;
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .dud {
   color: #757575;
 }
 .landingSectionTitle::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 105%;
   right: 0px;
@@ -130,13 +130,13 @@
   width: 100vw;
   background-color: rgb(21 128 61);
 }
-.shad{
+.shad {
   text-shadow: 2px 4px 4px rgb(21 128 61);
 }
 .landingSectionTitle2::before {
   display: flex;
   flex-direction: row-reverse;
-  content: "";
+  content: '';
   position: absolute;
   left: 0px; /* Change to 0% */
   right: 105%; /* Change to 0px */
@@ -155,7 +155,7 @@
 .landingSectionTitle2 span {
   margin-left: 4px; /* Adjust as needed for spacing between the lines */
 }
-.button12{
+.button12 {
   position: relative;
   align-items: center;
   text-align: center;
@@ -164,11 +164,10 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.5s;
- 
 }
-.button12{
+.button12 {
   border: none;
-  background:  url(https://i.postimg.cc/cH9RW2Nn/pixel.png);
+  background: url(https://i.postimg.cc/cH9RW2Nn/pixel.png);
   transition-delay: 0.8s;
   background-size: 180px;
   animation: animate 0.8s steps(8) forwards;
@@ -184,11 +183,11 @@
 }
 
 @keyframes animate {
-  0%{
-      background-position-y: 0;
+  0% {
+    background-position-y: 0;
   }
-  100%{
-      background-position-y: -480px;
+  100% {
+    background-position-y: -480px;
   }
 }
 
@@ -212,88 +211,91 @@
   text-align: center;
   color: #ffffff;
   margin-bottom: 20px;
-  font-family: "SFPixelate", monospace;
+  font-family: 'SFPixelate', monospace;
   font-size: 30px;
   padding: 90px 0px;
 }
-.by{
+.by {
   text-align: center;
   color: #ffffff;
   margin-bottom: 20px;
-  font-family: "SFPixelate", monospace;
+  font-family: 'SFPixelate', monospace;
   font-size: 20px;
   padding: 90px 0px;
   position: relative;
-  
 }
 
-@media (min-width:320px)  { 
-	.logo{
+@media (min-width: 320px) {
+  .logo {
     min-width: fit-content;
     width: 300px;
-  }/* smartphones, iPhone, portrait 480x320 phones */ }
-@media (min-width:340px)  {.logo{
-  min-width: fit-content;
-  width: 300px;
-}/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  {
-	.logo{
+  } /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width: 340px) {
+  .logo {
+    min-width: fit-content;
+    width: 300px;
+  } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width: 641px) {
+  .logo {
     width: 500px;
-  }/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { 
-	.logo{
+  } /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media (min-width: 961px) {
+  .logo {
     width: 600px;
   }
-/* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1000px) {.logo{
-  width: 700px;
-}/* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) {
-  .logo{
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1000px) {
+  .logo {
+    width: 700px;
+  } /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  .logo {
     width: 800px;
   }
 }
 
-
 @font-face {
-    font-family: "SFPixelate";
-    src: url("/fonts/SFPixelate.ttf");
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "AnultraSlabRegular";
-    src: url("/fonts/SFPixelate-Bold.ttf");
-    font-weight: 700;
-    font-display: swap;
-    font-style: bold;
-  }
-.pos{
-    
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding: 30px 0;
-    text-align: center;
-    position: absolute;
-    top: 60%;
-    left: 0%;
-    right: 0%;
-    left: 0%;
+  font-family: 'SFPixelate';
+  src: url('/fonts/SFPixelate.ttf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
-.pos2{
-    
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding: 30px 0;
-    text-align: center;
-    position: absolute;
-    top: 70%;
-    left: 0%;
-    right: 0%;
-    left: 0%;
+@font-face {
+  font-family: 'AnultraSlabRegular';
+  src: url('/fonts/SFPixelate-Bold.ttf');
+  font-weight: 700;
+  font-display: swap;
+  font-style: bold;
+}
+.pos {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  right: 0%;
+  left: 0%;
+}
+.pos2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  right: 0%;
+  left: 0%;
 }

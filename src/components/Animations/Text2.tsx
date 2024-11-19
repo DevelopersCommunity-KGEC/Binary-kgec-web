@@ -11,13 +11,13 @@ const TextScramble: React.FC<TextScrambleProps> = ({ text, svgMapping, maxDelay 
 
   useEffect(() => {
     const scrambleText = (node: HTMLDivElement) => {
-      const charsObj = text.split('').map(char => ({
+      const charsObj = text.split('').map((char) => ({
         char,
-        delay: (char === ' ') ? 0 : Math.floor(Math.random() * (maxDelay + 1)),
+        delay: char === ' ' ? 0 : Math.floor(Math.random() * (maxDelay + 1)),
       }));
 
       let timerId = setInterval(() => {
-        const scramblChars = charsObj.map(obj => {
+        const scramblChars = charsObj.map((obj) => {
           if (obj.delay === 0) return svgMapping[obj.char] || obj.char;
           if (obj.delay > 0) {
             obj.delay--;
@@ -35,7 +35,6 @@ const TextScramble: React.FC<TextScrambleProps> = ({ text, svgMapping, maxDelay 
     if (nodeRef.current) {
       scrambleText(nodeRef.current);
     }
-
   }, [text, svgMapping, maxDelay]);
 
   return <div ref={nodeRef} />;

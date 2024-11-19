@@ -1,5 +1,5 @@
-import React from "react";
-import { animate, motion } from "framer-motion";
+import React from 'react';
+import { animate, motion } from 'framer-motion';
 
 interface TypeAnimationProps {
   text: string;
@@ -14,7 +14,7 @@ const quote = {
     opacity: 1,
     transition: {
       delay: 0.9,
-      staggerchildren:0.08,
+      staggerchildren: 0.08,
     },
   },
 };
@@ -33,17 +33,25 @@ const singleword = {
   },
 };
 
-const TypeAnimation2: React.FC<TypeAnimationProps> = ({ text, className = "" }) => {
+const TypeAnimation2: React.FC<TypeAnimationProps> = ({ text, className = '' }) => {
   return (
-    <div className={`w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden ${className}`}>
-      <motion.h1 className="inline-block w-full   capitalize "
+    <div
+      className={`mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-center ${className}`}
+    >
+      <motion.h1
+        className="inline-block w-full capitalize"
         variants={quote}
         initial="initial"
         animate="animate"
       >
-        {text.split(" ").map((word, index) => (
-          <motion.span key={word + '-' + index} className="inline-block" variants={singleword}    initial="initial"
-          animate="animate">
+        {text.split(' ').map((word, index) => (
+          <motion.span
+            key={word + '-' + index}
+            className="inline-block"
+            variants={singleword}
+            initial="initial"
+            animate="animate"
+          >
             {word}&nbsp;
           </motion.span>
         ))}

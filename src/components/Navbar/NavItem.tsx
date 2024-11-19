@@ -1,9 +1,8 @@
 // NavItem.tsx
-"use client";
-import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-import React, { useState, useRef, Dispatch, SetStateAction } from "react";
-import { useGlitch } from "react-powerglitch";
+'use client';
+import { cn } from '@/lib/utils';
+import React, { Dispatch, SetStateAction } from 'react';
+import { useGlitch } from 'react-powerglitch';
 
 const NavItem = ({
   name,
@@ -19,7 +18,7 @@ const NavItem = ({
   closeMobileMenu?: () => void; // Add closeMobileMenu prop
 }) => {
   const glitch = useGlitch({
-    playMode: "hover",
+    playMode: 'hover',
     createContainers: true,
     hideOverflow: false,
     timing: {
@@ -48,7 +47,7 @@ const NavItem = ({
   return (
     <li
       ref={glitch.ref}
-      className="relative flex py-2 h-12 items-center"
+      className="relative flex h-12 items-center py-2"
       onClick={() => {
         if (setIsOpen) setIsOpen(false);
         if (closeMobileMenu) closeMobileMenu(); // Call closeMobileMenu if provided
@@ -57,7 +56,7 @@ const NavItem = ({
       <a
         href={link}
         className={cn(
-          "gap-5 w-[84px] bg-black/0 text-white text-md hover:text-md font-pixelate hover:font-bold hover:text-white rounded-none flex justify-center text-sm",
+          'text-md hover:text-md flex w-[84px] justify-center gap-5 rounded-none bg-black/0 font-pixelate text-sm text-white hover:font-bold hover:text-white',
         )}
       >
         <span>{name}</span>

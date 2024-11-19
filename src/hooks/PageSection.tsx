@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import MaxWidthWrapper from "../hooks/MaxWidthWrapper";
-import { cn } from "@/lib/utils";
+import { ReactNode } from 'react';
+import MaxWidthWrapper from '../hooks/MaxWidthWrapper';
+import { cn } from '@/lib/utils';
 
 const PageSection = ({
   id,
@@ -15,8 +15,8 @@ const PageSection = ({
     <div
       id={id}
       className={cn(
-        "min-h-[calc(100dvh-96px)] md:min-h-[calc(100dvh-116px)] py-3 md:py-5 ",
-        className
+        'min-h-[calc(100dvh-96px)] py-3 md:min-h-[calc(100dvh-116px)] md:py-5',
+        className,
       )}
     >
       <MaxWidthWrapper>{children}</MaxWidthWrapper>

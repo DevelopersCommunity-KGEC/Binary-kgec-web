@@ -1,31 +1,31 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { useGlitch } from "react-powerglitch";
-import Image from "next/image";
-import logo from "@public/images/thumbnail.png";
-import { appglitch } from "@/utils/glitch.util";
+'use client';
+import { useRouter } from 'next/navigation';
+import { useGlitch } from 'react-powerglitch';
+import Image from 'next/image';
+import logo from '@public/images/thumbnail.png';
+import { appglitch } from '@/utils/glitch.util';
 
 const Footer: React.FC = () => {
   const router = useRouter();
 
   const openPdfInNewTab = () => {
-    window.open("/PrisMa.pdf", "_blank");
+    window.open('/PrisMa.pdf', '_blank');
   };
 
   const glitch = useGlitch(appglitch);
   return (
-    <footer className="flex flex-col space-y-10 justify-center backdrop-filter backdrop-blur-md bg-opacity-50 w-full">
-      <div className="w-full text-[#1b1b1ba2] text-outline font-extrabold absolute top-1/4 transform -translate-y-1/2 z-[-1] text-[4rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[18rem] flex flex-row items-center justify-evenly tracking-widest">
+    <footer className="flex w-full flex-col justify-center space-y-10 bg-opacity-50 backdrop-blur-md backdrop-filter">
+      <div className="text-outline absolute top-1/4 z-[-1] flex w-full -translate-y-1/2 transform flex-row items-center justify-evenly text-[4rem] font-extrabold tracking-widest text-[#1b1b1ba2] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[18rem]">
         BINARY
       </div>
 
-      <div className="mx-auto max-w-[200px] w-[35%]  justify-center items-center mt-6">
+      <div className="mx-auto mt-6 w-[35%] max-w-[200px] items-center justify-center">
         <Image className="glitch" src={logo} alt="Binary Hackathon" />
       </div>
 
       {/* not needed already visible in navbar */}
 
-     {/* <nav className="flex justify-center flex-wrap gap-6 text-white font-sm mt-8 font-pixelate">
+      {/* <nav className="flex justify-center flex-wrap gap-6 text-white font-sm mt-8 font-pixelate">
         <a
           className=" gap-5 w-[84px] bg-black/0 text-white text-md hover:text-md font-pixelate hover:font-bold hover:text-white rounded-none flex justify-center text-sm"
           ref={glitch.ref}
@@ -85,13 +85,9 @@ const Footer: React.FC = () => {
       </nav> */}
 
       <div className="flex justify-center space-x-5">
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <svg
-            className="w-7 h-7 fill-green-600 hover:fill-white"
+            className="h-7 w-7 fill-green-600 hover:fill-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 8 19"
@@ -106,7 +102,7 @@ const Footer: React.FC = () => {
 
         <a href="https://git.com" target="_blank" rel="noopener noreferrer">
           <svg
-            className="w-6 h-6 fill-green-600 hover:fill-white"
+            className="h-6 w-6 fill-green-600 hover:fill-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -120,7 +116,7 @@ const Footer: React.FC = () => {
         </a>
         <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
           <svg
-            className="w-7 h-7 fill-green-600 hover:fill-white"
+            className="h-7 w-7 fill-green-600 hover:fill-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 21 16"
@@ -130,7 +126,7 @@ const Footer: React.FC = () => {
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <svg
-            className="w-7 h-7 fill-green-600 hover:fill-white"
+            className="h-7 w-7 fill-green-600 hover:fill-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 17"
@@ -146,8 +142,8 @@ const Footer: React.FC = () => {
       {/* <div className='text-white font-pixelate text-center text-md hover:text-md  hover:font-bold hover:text-white text-sm" ref={glitch.ref}' ref={glitch.ref}> <Link href="/Hackathonbrochure.pdf" target={'_blank'}>
     Sponsorship Brochure
       </Link></div> */}
-      <hr className="my-8 border-[#092b0b] border-[0.5px] mr-20 ml-20" />
-      <p className="text-center text-white/60 font-medium py-4">
+      <hr className="my-8 ml-20 mr-20 border-[0.5px] border-[#092b0b]" />
+      <p className="py-4 text-center font-medium text-white/60">
         &copy; {new Date().getFullYear()} Binary. All rights reserved.
       </p>
     </footer>

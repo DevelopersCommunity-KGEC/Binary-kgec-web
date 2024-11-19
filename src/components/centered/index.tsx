@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -45,9 +44,7 @@ const PixelBackground: React.FC<PixelBackgroundProps> = ({ active }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        
-      };
+      const handleResize = () => {};
 
       window.addEventListener('resize', handleResize);
 
@@ -66,7 +63,7 @@ const PixelBackground: React.FC<PixelBackgroundProps> = ({ active }) => {
       return shuffledIndexes.map((randomIndex, index) => (
         <motion.div
           key={index}
-          className="min-w-screen h-full md:min-h-20 min-h-[5vw] bg-green-700 border-2 border-green-700"
+          className="min-w-screen h-full min-h-[5vw] border-2 border-green-700 bg-green-700 md:min-h-20"
           variants={anim}
           initial="initial"
           animate={isOpen ? 'open' : 'closed'}
@@ -79,13 +76,16 @@ const PixelBackground: React.FC<PixelBackgroundProps> = ({ active }) => {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden fixed z-10 pointer-events-none" onClick={toggleAnimation}>
-    {[...Array(30)].map((_, index) => (
-      <div key={index} className="md:min-w-20 min-w-[5vw] h-full flex flex-col">
-        {getBlocks()}
-      </div>
-    ))}
-  </div>
+    <div
+      className="pointer-events-none fixed z-10 flex h-screen w-screen overflow-hidden"
+      onClick={toggleAnimation}
+    >
+      {[...Array(30)].map((_, index) => (
+        <div key={index} className="flex h-full min-w-[5vw] flex-col md:min-w-20">
+          {getBlocks()}
+        </div>
+      ))}
+    </div>
   );
 };
 

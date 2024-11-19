@@ -4,18 +4,15 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { RiMenu4Line } from 'react-icons/ri';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, Transition } from "@headlessui/react";
-import { useGlitch } from "react-powerglitch";
+import { Menu, Transition } from '@headlessui/react';
+import { useGlitch } from 'react-powerglitch';
 import NavLogo from '@public/images/binarylogo2.png';
-import { itemsdes1, itemsdes2, items } from '@/lib/config';
 import NavItem from './NavItem';
-
-
+import { navItems } from '@/constants/navItems';
 
 const Navbar = () => {
-  
   const glitch = useGlitch({
-    playMode: "hover",
+    playMode: 'hover',
     createContainers: true,
     hideOverflow: false,
     timing: {
@@ -70,121 +67,112 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={shadow ? 'fixed w-full h-[60px] shadow-xl shadow-black z-[100] ease-in-out duration-300' : 'fixed w-full h-[60px] z-[100] '}>
-    <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 backdrop-filter backdrop-blur-xl bg-opacity-50 '>
-      <Link href='/'>
-        <Image src={NavLogo} alt='/' className='cursor-pointer ml-4 md:w-[10%] w-[10%]' />
-      </Link>
-      <div>
-          
-          <ul className='hidden md:flex text-white font-pixelate mr-11'>
-            <ul className='flex gap-2'>
-              {itemsdes1.map((itemsdes1) => (
-                <NavItem key={itemsdes1.name} name={itemsdes1.name} link={itemsdes1.link} isActive={false}   />
+    <div
+      className={
+        shadow
+          ? 'fixed z-[100] h-[60px] w-full shadow-xl shadow-black duration-300 ease-in-out'
+          : 'fixed z-[100] h-[60px] w-full'
+      }
+    >
+      <div className="flex h-full w-full items-center justify-between bg-opacity-50 px-2 backdrop-blur-xl backdrop-filter 2xl:px-16">
+        <Link href="/">
+          <Image
+            src={NavLogo}
+            height={12}
+            width={12}
+            alt="/"
+            className="ml-4 w-[10%] cursor-pointer md:w-[10%]"
+          />
+        </Link>
+        <div>
+          <ul className="mr-11 hidden font-pixelate text-white md:flex">
+            <ul className="flex gap-2">
+              {navItems.map((item) => (
+                <NavItem key={item.name} name={item.name} link={item.link} isActive={false} />
               ))}
-            
-              <Menu as="div" className="">
-                <div>
-                  <Menu.Button ref={glitch.ref} className="gap-5 w-[84px] bg-black/0 text-white text-md hover:text-md font-pixelate hover:font-bold mt-[14px] hover:text-white rounded-none flex justify-center text-sm ">
-                    More
-                  </Menu.Button>
-                </div>
-
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
+            </ul>
+          </ul>
+          <div style={{ color: 'white' }} onClick={handleNav} className="text-white md:hidden">
+            <div className="mr-2 text-white">
+              {nav ? (
+                <div
+                  onClick={handleNav}
+                  className="cursor-pointer rounded-full bg-green-950 p-3 font-bold text-white opacity-0 shadow-lg shadow-green-700"
                 >
-                  <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-green-950 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1 flex justify-center items-center">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <ul className='flex flex-col text-center'>
-                            {itemsdes2.map((itemsdes2) => (
-                              <NavItem key={itemsdes2.name} name={itemsdes2.name} link={itemsdes2.link} isActive={false} />
-                            ))}
-                          </ul>
-                        )}
-                      </Menu.Item>
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-            </ul></ul>
-            <div style={{ color: 'white' }} onClick={handleNav} className='md:hidden text-white'>
-              <div className='text-white mr-2'>
-                {nav ? (
-                  <div
-                    onClick={handleNav}
-                    className='rounded-full shadow-lg shadow-green-700 bg-green-950 text-white font-bold p-3 cursor-pointer opacity-0'
-                  >
-                    <AiOutlineClose size={22} />
-                  </div>
-                ) : (
-                  <motion.div
-                  
-                    whileTap={{ scale: 0.6, rotate: 90 }} // Scale down when tapped
-                    transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                  >
-                    <RiMenu4Line size={32} />
-                  </motion.div>
-                )}
-              </div>
+                  <AiOutlineClose size={22} />
+                </div>
+              ) : (
+                <motion.div
+                  whileTap={{ scale: 0.6, rotate: 90 }} // Scale down when tapped
+                  transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                >
+                  <RiMenu4Line size={32} />
+                </motion.div>
+              )}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 backdrop-filter backdrop-blur-sm bg-opacity-50' : ''}>
-          <AnimatePresence>
-            {nav && (
-              <motion.div
-                initial={{ left: '-100%' }}
-                animate={{ left: 0 }}
-                exit={{ left: '-100%' }}
-                transition={{ ease: 'easeInOut', duration: 0.5 }}
-                className='md:hidden fixed left-0 top-0 w-full h-screen bg-green-950 backdrop-filter backdrop-blur-md bg-opacity-50 shadow-green-700 shadow-lg p-10'
-                // className='md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-green-950 backdrop-filter backdrop-blur-md bg-opacity-50 shadow-green-700 shadow-lg p-10'
-                style={{ backdropFilter: nav ? 'blur(10px)' : 'none' }}
-              >
-                <div>
-                  <div className='flex w-full items-center justify-between'>
-                    <Link href='/'>
-                      <Image src={NavLogo} width='87' height='35' alt='/' />
-                    </Link>  <motion.div
-                    initial={{opacity:1}}
-                    whileTap={{ scale: 0.6, rotate: -90 ,opacity:0 }} // Scale down when tapped
+      {/* Mobile Menu */}
+      <div
+        className={
+          nav
+            ? 'fixed left-0 top-0 h-screen w-full bg-black/70 bg-opacity-50 backdrop-blur-sm backdrop-filter md:hidden'
+            : ''
+        }
+      >
+        <AnimatePresence>
+          {nav && (
+            <motion.div
+              initial={{ left: '-100%' }}
+              animate={{ left: 0 }}
+              exit={{ left: '-100%' }}
+              transition={{ ease: 'easeInOut', duration: 0.5 }}
+              className="fixed left-0 top-0 h-screen w-full bg-green-950 bg-opacity-50 p-10 shadow-lg shadow-green-700 backdrop-blur-md backdrop-filter md:hidden"
+              // className='md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-green-950 backdrop-filter backdrop-blur-md bg-opacity-50 shadow-green-700 shadow-lg p-10'
+              style={{ backdropFilter: nav ? 'blur(10px)' : 'none' }}
+            >
+              <div>
+                <div className="flex w-full items-center justify-between">
+                  <Link href="/">
+                    <Image src={NavLogo} width="87" height="35" alt="/" />
+                  </Link>{' '}
+                  <motion.div
+                    initial={{ opacity: 1 }}
+                    whileTap={{ scale: 0.6, rotate: -90, opacity: 0 }} // Scale down when tapped
                     transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                   >
                     <div
                       onClick={handleNav}
-                      className='rounded-full shadow-md shadow-green-700  font-extrabold text-white  p-3 cursor-pointer '
+                      className="cursor-pointer rounded-full p-3 font-extrabold text-white shadow-md shadow-green-700"
                     >
-                    
                       <AiOutlineClose size={22} />
-                    </div></motion.div>
-                  </div>
+                    </div>
+                  </motion.div>
                 </div>
-                <div className='py-4 flex flex-col'>
-                  <ul className='uppercase font-pixelate text-white'>
-                    <ul className='relative flex flex-col items-center gap-2 justify-around '>
-                      {items.map((item) => (
-                        <NavItem key={item.name} name={item.name} link={item.link} isActive={false} closeMobileMenu={closeMobileMenu} />
-                      ))}
-                    </ul>
+              </div>
+              <div className="flex flex-col py-4">
+                <ul className="font-pixelate uppercase text-white">
+                  <ul className="relative flex flex-col items-center justify-around gap-2">
+                    {navItems.map((item) => (
+                      <NavItem
+                        key={item.name}
+                        name={item.name}
+                        link={item.link}
+                        isActive={false}
+                        closeMobileMenu={closeMobileMenu}
+                      />
+                    ))}
                   </ul>
-                  <div className='pt-40'></div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+                </ul>
+                <div className="pt-40"></div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-  
+    </div>
   );
 };
 

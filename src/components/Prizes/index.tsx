@@ -1,22 +1,22 @@
-import BinaryText from "../Animations/BinaryText";
-import PageSection from "@/hooks/PageSection";
+import BinaryText from '../Animations/BinaryText';
+import PageSection from '@/hooks/PageSection';
 // import useTextScramble from "../Animations/text";
-import styled from "styled-components";
+import styled from 'styled-components';
 // import * as demoProfileImg from "../../public/demoprofile.png";
-import * as logo from "@public/images/binarylogo2.png";
-import * as position1 from "@public/images/Asset 2.png";
-import * as position2 from "@public/images/Asset 3.png";
-import * as position3 from "@public/images/Asset 4.png";
-import Image from "next/image";
-import React, { useState, useRef, useEffect } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import * as logo from '@public/images/binarylogo2.png';
+import * as position1 from '@public/images/Asset 2.png';
+import * as position2 from '@public/images/Asset 3.png';
+import * as position3 from '@public/images/Asset 4.png';
+import Image from 'next/image';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 // import Link from "next/link";
 // // import { Linkedin, Twitter } from "lucide-react";
 // // import { buttonVariants } from "../ui/button";
 // // import { cn } from "@/lib/utils";
 // // import Confetticomp from "../Confeetti";
 const spring = {
-  type: "spring",
+  type: 'spring',
   stiffness: 300,
   damping: 40,
 };
@@ -98,9 +98,9 @@ const ImageContainer = styled.div`
 const MemberComponent: React.FC<MemberComponentProps> = ({
   imgurl,
   imgurl2,
-  name = "",
-  CashPrize = " ",
-  TotalPrize = "",
+  name = '',
+  CashPrize = ' ',
+  TotalPrize = '',
 }) => {
   const cardX = useMotionValue(0);
   const cardY = useMotionValue(0);
@@ -124,26 +124,26 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
 
   return (
     <motion.div
-      className="lg:m-4 md:m-0"
+      className="md:m-0 lg:m-4"
       style={{
         perspective: 800,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <motion.div
         style={{
-          margin: "auto",
-          width: "100%",
-          height: "100%",
-          transformStyle: "preserve-3d",
+          margin: 'auto',
+          width: '100%',
+          height: '100%',
+          transformStyle: 'preserve-3d',
           perspective: 800,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           rotateX,
           rotateY,
         }}
@@ -152,50 +152,50 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
         <motion.div
           key="card"
           style={{
-            boxShadow: "0px 0px 30px -7px rgba(0,0,0,0.45)",
+            boxShadow: '0px 0px 30px -7px rgba(0,0,0,0.45)',
             borderRadius: 10,
 
-            transformStyle: "preserve-3d",
+            transformStyle: 'preserve-3d',
             perspective: 800, // Set perspective on the card
           }}
           transition={{ velocity: 0 }}
         >
-          {" "}
-          <div className=" p-6 w-[100px]  absolute top-16 right-2 ">
+          {' '}
+          <div className="absolute right-2 top-16 w-[100px] p-6">
             <Image
-              className=" w-40 justify-center flex"
+              className="flex w-40 justify-center"
               src={imgurl2.src} // Use the imported image URL here
               alt={name}
               width={imgurl2.width} // Specify the width
               height={imgurl2.height} // Specify the height
             />
           </div>
-          <div className="capitalize font-bold text-1.5xl font-pixelate text-white shad ml-20 mr-4 sm:text-xl xs:text-lg  text-center mt-2 bg-green-700 -skew-x-12 shadow-md shadow-green-700 ">
+          <div className="text-1.5xl shad xs:text-lg ml-20 mr-4 mt-2 -skew-x-12 bg-green-700 text-center font-pixelate font-bold capitalize text-white shadow-md shadow-green-700 sm:text-xl">
             {name}
           </div>
-          <Item className=" flex flex-col items-center justify-center image-container bg-transparent border-2 border-green-700 rounded-b-lg">
-            <div className="flex flex-col gap-6 mt-6">
-              <div className="flex flex-col mt-10 ">
-                <h1 className="text-green-500 font-semibold text-md font-pixelate  w-[90%]  mx:text-sm text-start ml-4">
+          <Item className="image-container flex flex-col items-center justify-center rounded-b-lg border-2 border-green-700 bg-transparent">
+            <div className="mt-6 flex flex-col gap-6">
+              <div className="mt-10 flex flex-col">
+                <h1 className="text-md mx:text-sm ml-4 w-[90%] text-start font-pixelate font-semibold text-green-500">
                   TotalPrize
                 </h1>
-                <p className="text-white font-thin text-sm font-pixelate  w-[90%]  mx:text-sm text-start ml-4">
+                <p className="mx:text-sm ml-4 w-[90%] text-start font-pixelate text-sm font-thin text-white">
                   {CashPrize}
                 </p>
               </div>
-              <div className="flex flex-col  ">
-                <h1 className="text-green-500 font-semibold text-md font-pixelate  w-[90%]  mx:text-sm text-start ml-4">
+              <div className="flex flex-col">
+                <h1 className="text-md mx:text-sm ml-4 w-[90%] text-start font-pixelate font-semibold text-green-500">
                   CashPrize
                 </h1>
-                <p className="mb-10 text-white font-thin text-sm font-pixelate  w-[90%]  mx:text-sm text-start ml-4">
+                <p className="mx:text-sm mb-10 ml-4 w-[90%] text-start font-pixelate text-sm font-thin text-white">
                   {TotalPrize}
                 </p>
               </div>
             </div>
           </Item>
-          <div className=" p-6 w-[100px] bg-black overflow-hidden border-solid border-2 hover: border-green-700 absolute -top-0 -left-2 ">
+          <div className="hover: absolute -left-2 -top-0 w-[100px] overflow-hidden border-2 border-solid border-green-700 bg-black p-6">
             <Image
-              className=" w-40 justify-center flex"
+              className="flex w-40 justify-center"
               src={imgurl.src} // Use the imported image URL here
               alt={name}
               width={imgurl.width} // Specify the width
@@ -216,34 +216,34 @@ const Team: React.FC = () => {
         {/*<Confetticomp/>*/}
         <div className="mt-[96px] md:mt-[116px]">
           <BinaryText
-            className="text-white font-pixelate text-[2rem] md:text-[3rem] font-bold"
+            className="font-pixelate text-[2rem] font-bold text-white md:text-[3rem]"
             reveal
           >
-            <div className="overflow-x-hidden w-full pt-5 sm:hidden text-xl shad relative">
-              <h2 className=" flex flex-row max-w-sm md:max-w-max mx-0  font-pixelate  text-left font-bold mb-10 pt-4 md:pt-0 uppercase md:w-max relative">
-                <span className="flex-none text-green-500 opacity-85 font-bold tracking-wider pl-1">
+            <div className="shad relative w-full overflow-x-hidden pt-5 text-xl sm:hidden">
+              <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold uppercase md:w-max md:max-w-max md:pt-0">
+                <span className="flex-none pl-1 font-bold tracking-wider text-green-500 opacity-85">
                   04.
                 </span>
-                <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider pl-2">
+                <span className="flex-none pl-2 font-bold tracking-wider text-gray-200 opacity-85">
                   Prizes
                 </span>
 
-                <div className="flex flex-col item-center justify-center ">
-                  <div className="right-full  transform h-[4px] w-[70vh] bg-green-500 mt-[10px] ml-4"></div>
+                <div className="item-center flex flex-col justify-center">
+                  <div className="right-full ml-4 mt-[10px] h-[4px] w-[70vh] transform bg-green-500"></div>
                 </div>
               </h2>
             </div>
-            <div className="overflow-x-hidden w-full pt-5 sm:block hidden shad relative">
-              <h2 className=" flex flex-row max-w-sm md:max-w-max mx-0  font-pixelate  text-left font-bold mb-10 pt-4 md:pt-0 md:w-max relative">
-                <span className="flex-none text-green-500 opacity-85 font-bold tracking-wider pl-4">
+            <div className="shad relative hidden w-full overflow-x-hidden pt-5 sm:block">
+              <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold md:w-max md:max-w-max md:pt-0">
+                <span className="flex-none pl-4 font-bold tracking-wider text-green-500 opacity-85">
                   04.
                 </span>
-                <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider pl-4">
+                <span className="flex-none pl-4 font-bold tracking-wider text-gray-200 opacity-85">
                   Prizes
                 </span>
 
-                <div className="flex flex-col item-center justify-center ">
-                  <div className="right-full top-[55%] transform h-[1px] w-[70vh] bg-[#1d6339] mt-[25px] ml-4"></div>
+                <div className="item-center flex flex-col justify-center">
+                  <div className="right-full top-[55%] ml-4 mt-[25px] h-[1px] w-[70vh] transform bg-[#1d6339]"></div>
                 </div>
               </h2>
             </div>
@@ -259,7 +259,7 @@ const Team: React.FC = () => {
                 imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
               />
             </div>
-            <div className="lg:mt-0 mt-20 mb-20 lg:mb-0 lg:order-2 ">
+            <div className="mb-20 mt-20 lg:order-2 lg:mb-0 lg:mt-0">
               <MemberComponent
                 imgurl={{ src: position2.default.src, width: 10, height: 10 }}
                 name="2nd Prize"

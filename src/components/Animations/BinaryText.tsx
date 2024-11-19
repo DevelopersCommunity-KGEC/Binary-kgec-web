@@ -1,15 +1,8 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import {
-  ReactNode,
-  RefObject,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
-import { useInView } from "react-intersection-observer";
+import { cn } from '@/lib/utils';
+import { ReactNode, RefObject, useEffect, useMemo, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const BinaryText = ({
   className,
@@ -21,7 +14,7 @@ const BinaryText = ({
   reveal?: boolean;
 }) => {
   const text = children as string;
-  const letters = "01010110111101001001";
+  const letters = '01010110111101001001';
   const [headlineText, setHeadlineText] = useState<string>(text);
 
   const scrambleReveal = () => {
@@ -32,14 +25,14 @@ const BinaryText = ({
     const scrambleText = () => {
       setHeadlineText((prevText) => {
         const scrambledText = prevText
-          .split("")
+          .split('')
           .map((letter, index) => {
             if (index < iteration) {
               return text[index];
             }
             return letters[Math.floor(Math.random() * length)];
           })
-          .join("");
+          .join('');
 
         iteration += 1 / 9;
 
@@ -69,7 +62,7 @@ const BinaryText = ({
   });
 
   return (
-    <span ref={ref} className={cn("block", className)}>
+    <span ref={ref} className={cn('block', className)}>
       {headlineText}
     </span>
   );

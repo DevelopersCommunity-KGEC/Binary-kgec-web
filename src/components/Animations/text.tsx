@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useEffect, useRef, useState } from 'react';
 
 class TextScramble {
@@ -85,7 +85,7 @@ const useTextScramble = (phrases: string[], duration: number = 800) => {
           }
         });
       },
-      { threshold: 0.5 } // Adjust the threshold as needed
+      { threshold: 0.5 }, // Adjust the threshold as needed
     );
 
     if (textRef.current) {
