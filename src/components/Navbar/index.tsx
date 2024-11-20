@@ -78,10 +78,10 @@ const Navbar = () => {
         <Link href="/">
           <Image
             src={NavLogo}
-            height={12}
-            width={12}
+            // height={auto}
+            // width={12}
             alt="/"
-            className="ml-4 w-[10%] cursor-pointer md:w-[10%]"
+            className="px-2  w-[13%] cursor-pointer md:w-[12%]"
           />
         </Link>
         <div>

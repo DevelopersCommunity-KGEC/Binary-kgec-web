@@ -112,17 +112,17 @@ const About = () => {
                 Government Engineering College.
               </p>
             </div>
-            <div className="order-1 flex h-max items-center justify-center gap-4 md:order-2 md:col-span-3">
-              <span ref={glitch.ref} className="item-center flex justify-center">
+          <div className="order-1 flex h-max  items-center justify-center gap-4 md:order-2 md:col-span-3">
+         <span ref={glitch.ref} className="item-center flex justify-center">
                 <Image
                   width={100}
-                  className="flex w-[60%] items-center justify-center"
+                  className="flex w-[60%] items-center justify-center lg:hidden"
                   src={logo}
                   alt="Binary Hackathon"
                 />
-              </span>
-              {/* <ParticleImage
-                src="./binarylogo2.png"
+              </span> 
+               <ParticleImage
+                src={logo.src}
                 width={400}
                 scale={0.7}
                 entropy={20}
@@ -131,8 +131,8 @@ const About = () => {
                 mouseMoveForce={motionForce}
                 touchMoveForce={motionForce}
                 backgroundColor="transparent"
-                className="w-full md:w-[70%] hidden lg:block"
-              /> */}
+                className="w-full md:w-[70%]  hidden lg:block"
+              /> 
             </div>
           </div>
         </div>
