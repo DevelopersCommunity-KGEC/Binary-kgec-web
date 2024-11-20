@@ -1,42 +1,26 @@
+import avalancheSvg from '../../public/sponsors/Avalanche.svg';
+
 export const sponsors = [
   {
     title: 'Tera Sponsor',
     sponsors: [
       {
-        logo: '',
+        logo: avalancheSvg,
         link: '',
-        alt: '',
+        alt: 'Avalanve svg',
       },
     ],
   },
-  {
-    title: 'Giga Sponsor',
-    sponsors: [
-      {
-        logo: '',
-        link: '',
-        alt: '',
-      },
-    ],
-  },
-  {
-    title: 'Mega Sponsor',
-    sponsors: [
-      {
-        logo: '',
-        link: '',
-        alt: '',
-      },
-    ],
-  },
-  {
-    title: 'Kilo Sponsor',
-    sponsors: [
-      {
-        logo: '',
-        link: '',
-        alt: '',
-      },
-    ],
-  },
+  // {
+  //   title: 'Giga Sponsor',
+  //   sponsors: [],
+  // },
+  // {
+  //   title: 'Mega Sponsor',
+  //   sponsors: [],
+  // },
+  // {
+  //   title: 'Kilo Sponsor',
+  //   sponsors: [],
+  // },
 ];
