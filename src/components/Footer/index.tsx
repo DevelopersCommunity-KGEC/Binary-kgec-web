@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     window.open('/PrisMa.pdf', '_blank');
   };
 
-  const glitch = useGlitch(appglitch);
+  const glitch = useGlitch(appglitch as any);
   return (
     <footer className="flex w-full flex-col justify-center space-y-10 bg-opacity-50 backdrop-blur-md backdrop-filter">
       <div className="text-outline absolute top-1/4 z-[-1] flex w-full -translate-y-1/2 transform flex-row items-center justify-evenly text-[4rem] font-extrabold tracking-widest text-[#1b1b1ba2] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[18rem]">
