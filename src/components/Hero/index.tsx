@@ -74,8 +74,11 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
           <div className="flex w-full items-center justify-center md:w-1/2">
             <div className="b relative mx-auto flex h-10 w-64 items-center justify-center md:h-[50px]">
               <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl border-2 border-green-700 bg-transparent shadow-md shadow-green-700 transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div>
-              <a className="font-md pointer-events-none z-10 text-center font-pixelate text-white">
-                pre-registration
+              <a
+                href="/assets/brochure.pdf"
+                className="font-md z-10 text-center font-pixelate text-white"
+              >
+                Brochure
               </a>
             </div>
           </div>
