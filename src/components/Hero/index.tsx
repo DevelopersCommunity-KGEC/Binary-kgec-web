@@ -53,7 +53,10 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
           <div className="mt-4 flex w-full items-center justify-center md:mt-0 md:w-1/2">
             <div className="b mx-auto flex h-10 w-64 animate-bounce items-center justify-center md:h-[50px] md:animate-none">
               <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl bg-opacity-50 bg-gradient-to-br from-green-950/40 to-green-700/40 shadow-md shadow-green-700 backdrop-blur-sm backdrop-filter transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div>
-              <a className="font-md justify-content pointer-events-none z-10 flex items-center text-center font-pixelate text-white">
+              <a
+                href="http://discord.gg/yKcMYeMMe8"
+                className="font-md justify-content z-10 flex items-center text-center font-pixelate text-white"
+              >
                 <span className="mr-4">
                   <svg
                     className="h-7 w-7 fill-white"
