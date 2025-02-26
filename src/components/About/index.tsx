@@ -108,20 +108,20 @@ const About = () => {
               <p className="my-5 mb-4 font-pixelate font-bold text-green-400">
                 {/* about content */}
                 We intend to host about 300 students with expertise in diverse domains of computer
-                science. The BINARY will take place in the first half of March at the Kalyani
-                Government Engineering College.
+                science. The BINARY will take place in March at Kalyani Government Engineering
+                College.
               </p>
             </div>
-          <div className="order-1 flex h-max  items-center justify-center gap-4 md:order-2 md:col-span-3">
-         <span ref={glitch.ref} className="item-center flex justify-center">
+            <div className="order-1 flex h-max items-center justify-center gap-4 md:order-2 md:col-span-3">
+              <span ref={glitch.ref} className="item-center flex justify-center">
                 <Image
                   width={100}
                   className="flex w-[60%] items-center justify-center lg:hidden"
                   src={logo}
                   alt="Binary Hackathon"
                 />
-              </span> 
-               <ParticleImage
+              </span>
+              <ParticleImage
                 src={logo.src}
                 width={400}
                 scale={0.7}
@@ -131,8 +131,8 @@ const About = () => {
                 mouseMoveForce={motionForce}
                 touchMoveForce={motionForce}
                 backgroundColor="transparent"
-                className="w-full md:w-[70%]  hidden lg:block"
-              /> 
+                className="hidden w-full md:w-[70%] lg:block"
+              />
             </div>
           </div>
         </div>
