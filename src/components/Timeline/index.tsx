@@ -287,30 +287,18 @@ const Timeline = () => {
                 {/* Left side timeline items */}
                 <div className="mt-[35%]">
                   <Data
-                    head="Registations Ends "
-                    date="Januray 15"
-                    des="Registations Ends  "
-                    links="https://binary.com"
+                    head="Registration End"
+                    date="20th March"
+                    des="Registration End"
+                    links=""
                     add=""
                   />
                 </div>
                 <div className="mt-[47%]">
-                  <Data
-                    head="Hackathon Start"
-                    date="March 20"
-                    des="Hackathon Start "
-                    links="https://binary.com"
-                    add=""
-                  />
+                  <Data head="Hackathon Starts" date="TBD" des="Hackathon Starts" links="" add="" />
                 </div>
                 <div className="mt-[46%]">
-                  <Data
-                    head="Results"
-                    date="March 21"
-                    des="Results will be declared "
-                    links="https://binary.com"
-                    add=""
-                  />
+                  <Data head="Hackathon Ends" date="TBD" des="Hackathon Ends" links="" add="" />
                 </div>
               </ul>
             </div>
@@ -322,32 +310,31 @@ const Timeline = () => {
               {/* Right side timeline items */}
               <div className="mb-[47%]">
                 <Data2
-                  head="Registrations Begins"
-                  date="December 1"
-                  des="Registrations Begins "
+                  head="Registration Start"
+                  date="25th February"
+                  des="Registration Start"
                   links=""
                   add=""
                 />
               </div>
               <div className="mb-[47%]">
                 <Data2
-                  head="Online Quiz"
-                  date="March 15"
-                  des="Online quiz round "
+                  head="Approvals Roll out"
+                  date="TBD"
+                  des="Approvals Roll out"
                   links=""
                   add=""
                 />
               </div>
               <div className="mb-[47%]">
                 <Data2
-                  head="Submission"
-                  date="March 21"
-                  des="Last date of submission"
+                  head="Submission of Projects"
+                  date="TBD"
+                  des="Submission of Projects"
                   links=""
                   add=""
                 />
               </div>
-              {/* Add more Data components as needed */}
             </ul>
           </div>
           {/* Mobile view (alternating columns) */}
