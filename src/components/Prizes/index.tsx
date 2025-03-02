@@ -173,22 +173,22 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
           <div className="text-1.5xl shad xs:text-lg ml-20 mr-4 mt-2 -skew-x-12 bg-green-700 text-center font-pixelate font-bold capitalize text-white shadow-md shadow-green-700 sm:text-xl">
             {name}
           </div>
-          <Item className="image-container flex flex-col items-center justify-center rounded-b-lg border-2 border-green-700 bg-transparent">
-            <div className="mt-6 flex flex-col gap-6">
-              <div className="mt-10 flex flex-col">
+          <Item className="image-container flex flex-col items-start justify-center rounded-b-lg border-2 border-green-700 bg-transparent">
+            <div className="mt-6 flex flex-col gap-4">
+              <div className="mt-12 flex flex-col">
                 <h1 className="text-md mx:text-sm ml-4 w-[90%] text-start font-pixelate font-semibold text-green-500">
-                  TotalPrize
+                  Total Prize
                 </h1>
-                <p className="mx:text-sm ml-4 w-[90%] text-start font-pixelate text-sm font-thin text-white">
-                  {CashPrize}
+                <p className="mx:text-sm ml-6 w-[90%] text-start font-pixelate text-xl font-thin text-white">
+                  {TotalPrize}
                 </p>
               </div>
               <div className="flex flex-col">
                 <h1 className="text-md mx:text-sm ml-4 w-[90%] text-start font-pixelate font-semibold text-green-500">
-                  CashPrize
+                  Cash Prize
                 </h1>
-                <p className="mx:text-sm mb-10 ml-4 w-[90%] text-start font-pixelate text-sm font-thin text-white">
-                  {TotalPrize}
+                <p className="mx:text-sm mb-4 ml-6 w-[90%] text-start font-pixelate text-lg font-thin text-white">
+                  {CashPrize}
                 </p>
               </div>
             </div>
@@ -208,8 +208,8 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
   );
 };
 
-// Team component definition
-const Team: React.FC = () => {
+// Price component definition
+const Price: React.FC = () => {
   return (
     <PageSection id="prizes">
       <Section>
@@ -254,8 +254,8 @@ const Team: React.FC = () => {
               <MemberComponent
                 imgurl={{ src: position1.default.src, width: 10, height: 10 }}
                 name="1st Prize "
-                CashPrize="Total Prize of Worth $"
-                TotalPrize="Total Prize of Worth $"
+                CashPrize="25k"
+                TotalPrize="30k"
                 imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
               />
             </div>
@@ -263,16 +263,16 @@ const Team: React.FC = () => {
               <MemberComponent
                 imgurl={{ src: position2.default.src, width: 10, height: 10 }}
                 name="2nd Prize"
-                CashPrize="Total Prize of Worth $"
-                TotalPrize="Total Prize of Worth $"
+                CashPrize="15K"
+                TotalPrize="20K"
                 imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
               />
             </div>
             <MemberComponent
               imgurl={{ src: position3.default.src, width: 10, height: 10 }}
               name="3rd Prize"
-              CashPrize="Total Prize of Worth $"
-              TotalPrize="Total Prize of Worth $"
+              CashPrize="10K"
+              TotalPrize="15K"
               imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
             />
             {/* ... other MemberComponent instances */}
@@ -283,4 +283,4 @@ const Team: React.FC = () => {
   );
 };
 
-export default Team;
+export default Price;
