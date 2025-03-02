@@ -1,7 +1,7 @@
 export const timeline = [
   {
     title: 'Registration Start',
-    date: '25th February',
+    date: '3rd March',
     description: 'Registration Start',
   },
   {
