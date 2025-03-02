@@ -86,7 +86,7 @@ const Navbar = () => {
         </Link>
         <div>
           <ul className="mr-11 hidden font-pixelate text-white md:flex">
-            <ul className="flex gap-2">
+            <ul className="flex gap-6">
               {navItems.map((item) => (
                 <NavItem key={item.name} name={item.name} link={item.link} isActive={false} />
               ))}

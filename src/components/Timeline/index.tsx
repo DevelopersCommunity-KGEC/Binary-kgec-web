@@ -311,7 +311,7 @@ const Timeline = () => {
               <div className="mb-[47%]">
                 <Data2
                   head="Registration Start"
-                  date="25th February"
+                  date="3rd March"
                   des="Registration Start"
                   links=""
                   add=""
