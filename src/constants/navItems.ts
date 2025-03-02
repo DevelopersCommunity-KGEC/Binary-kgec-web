@@ -24,6 +24,10 @@ export const navItems = [
     link: '#sponsors',
   },
   {
+    name: 'Community Partners',
+    link: '#community-partners',
+  },
+  {
     name: 'FAQs',
     link: '#faqs',
   },
