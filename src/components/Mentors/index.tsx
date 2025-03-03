@@ -18,7 +18,7 @@ import logo from '@public/images/binarylogo2.png';
 import { TypeAnimation } from 'react-type-animation';
 
 // Custom arrow component for previous
-const CustomPrevArrow: React.FC = ({ onClick }: any) => (
+export const CustomPrevArrow: React.FC = ({ onClick }: any) => (
   <div
     className="custom-arrow absolute -left-[35px] top-1/2 -translate-y-1/2 transform"
     onClick={onClick}
@@ -27,7 +27,7 @@ const CustomPrevArrow: React.FC = ({ onClick }: any) => (
   </div>
 );
 
-const CustomNextArrow: React.FC = ({ onClick }: any) => (
+export const CustomNextArrow: React.FC = ({ onClick }: any) => (
   <div
     className="custom-arrow absolute -right-[35px] top-1/2 -translate-y-1/2 transform"
     onClick={onClick}

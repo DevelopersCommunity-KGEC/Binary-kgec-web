@@ -17,7 +17,7 @@ export const faqItems = [
   {
     question: 'What is the team size? Can I partipate without a team?',
     answer:
-      'The team size is specifically 4 members and unfortunately participants must be a member of a team to take part in Binary.',
+      'Team size should vary from 2-4 and unfortunately participants must be a member of a team to take part in Binary. No solo participation is allowed.',
   },
   {
     question: 'What should I bring to the event?',
