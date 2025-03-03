@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 // import Transition from "@/components/Animations/Animation";
 
 import styled from 'styled-components';
+import CommunityPartners from '@/components/CommunityPartners';
 const Navbar = dynamic(() => import('@/components/Navbar'));
 const MaxWidthWrapper = dynamic(() => import('@/hooks/MaxWidthWrapper'));
 const Hero = dynamic(() => import('@/components/Hero'));
@@ -64,6 +65,7 @@ const Landing = () => {
             <Mentor />
             {/* <Team/> */}
             <Sponsors />
+            <CommunityPartners />
             <FAQs />
           </MaxWidthWrapper>
           <motion.div

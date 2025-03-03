@@ -1,0 +1,58 @@
+import Ccju from '../../public/communityPartners/transparent/CCJU.png';
+import DDC from '../../public/communityPartners/transparent/DDC_Logo.png';
+import Gde_aot from '../../public/communityPartners/transparent/aot.png';
+import Gde_gcelt from '../../public/communityPartners/transparent/leather.png';
+import Gde_msit from '../../public/communityPartners/transparent/msit.png';
+import Gde_nsec from '../../public/communityPartners/transparent/nsec.png';
+import Gdeoc_bit from '../../public/communityPartners/transparent/bit.png';
+import Igniters from '../../public/communityPartners/transparent/igniters_logo.png';
+import Lnc from '../../public/communityPartners/transparent/LNC LOGO.png';
+import Noo_build from '../../public/communityPartners/transparent/noobuild.png';
+import Sourcify from '../../public/communityPartners/transparent/sourcify.png';
+
+export const communityPartnersItems = [
+  {
+    url: 'https://www.linkedin.com/company/codeclub-ju/?originalSubdomain=in',
+    imageUrl: Ccju,
+  },
+  {
+    url: 'https://www.devdotcom.in/',
+    imageUrl: DDC,
+  },
+  {
+    url: 'https://gdg.community.dev/gdg-on-campus-academy-of-technology-hooghly-india/',
+    imageUrl: Gde_aot,
+  },
+  {
+    url: 'https://gdg.community.dev/gdg-on-campus-government-college-of-engineering-and-leather-technology-kolkata-india/',
+    imageUrl: Gde_gcelt,
+  },
+  {
+    url: 'https://gdg.community.dev/gdg-on-campus-meghnad-saha-institute-of-technology-kolkata-india/',
+    imageUrl: Gde_msit,
+  },
+  {
+    url: 'https://gdg.community.dev/gdg-on-campus-netaji-subhash-engineering-college-kolkata-india/',
+    imageUrl: Gde_nsec,
+  },
+  {
+    url: 'https://gdg.community.dev/gdg-on-campus-bengal-institute-of-technology-kolkata-india/',
+    imageUrl: Gdeoc_bit,
+  },
+  {
+    url: 'https://www.linkedin.com/company/unstop-igniters-club-rcciit/?originalSubdomain=in',
+    imageUrl: Igniters,
+  },
+  {
+    url: 'https://lnc-community.vercel.app/',
+    imageUrl: Lnc,
+  },
+  {
+    url: 'https://www.noobuild.in/',
+    imageUrl: Noo_build,
+  },
+  {
+    url: 'https://www.linkedin.com/company/sourcifyin/',
+    imageUrl: Sourcify,
+  },
+];

@@ -52,10 +52,24 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
         <div className="mx-auto mt-16 flex flex-col gap-8 md:mt-0 md:flex-row">
           <div className="mt-4 flex w-full items-center justify-center md:mt-0 md:w-1/2">
             <div className="b mx-auto flex h-10 w-64 animate-bounce items-center justify-center md:h-[50px] md:animate-none">
-              <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl bg-opacity-50 bg-gradient-to-br from-green-950/40 to-green-700/40 shadow-md shadow-green-700 backdrop-blur-sm backdrop-filter transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div>
+              {/* <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl bg-opacity-50 bg-gradient-to-br from-green-950/40 to-green-700/40 shadow-md shadow-green-700 backdrop-blur-sm backdrop-filter transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div> */}
+              <a
+                href="https://hackquest.io/hackathons/BINARY?utm=dev_community_kgec"
+                target='_blank'
+                className="flex justify-center items-center font-lg font-bold h-full w-full text-center font-pixelate text-white transform cursor-pointer overflow-hidden rounded-xl bg-opacity-50 bg-gradient-to-br from-green-950/40 to-green-700/40 shadow-md shadow-green-700 backdrop-blur-sm backdrop-filter transition duration-300 ease-out hover:scale-105 hover:bg-green-950 md:h-[50px]"
+              >
+                Register Now
+              </a>
+            </div>
+          </div>
+          <div className="flex w-full items-center justify-center md:w-1/2">
+            <div className="b relative mx-auto flex h-10 w-64 items-center justify-center md:h-[50px]">
+              {/* <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl border-2 border-green-700 bg-transparent shadow-md shadow-green-700 transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div> */}
+
               <a
                 href="http://discord.gg/yKcMYeMMe8"
-                className="font-md justify-content z-10 flex items-center text-center font-pixelate text-white"
+                target='_blank'
+                className="flex justify-center items-center font-md  w-full h-full text-center font-pixelate text-white transform cursor-pointer rounded-xl border-2 border-green-700 bg-transparent shadow-md shadow-green-700 transition duration-300 ease-out hover:scale-105 hover:bg-green-950 md:h-[50px]"
               >
                 <span className="mr-4">
                   <svg
@@ -68,17 +82,6 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
                   </svg>
                 </span>
                 Discord Link
-              </a>
-            </div>
-          </div>
-          <div className="flex w-full items-center justify-center md:w-1/2">
-            <div className="b relative mx-auto flex h-10 w-64 items-center justify-center md:h-[50px]">
-              <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl border-2 border-green-700 bg-transparent shadow-md shadow-green-700 transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div>
-              <a
-                href="/assets/brochure.pdf"
-                className="font-md z-10 text-center font-pixelate text-white"
-              >
-                Brochure
               </a>
             </div>
           </div>

@@ -15,7 +15,7 @@ const Tracks = () => {
     {
       title: 'Environment',
       description:
-        'Develop solutions for environmental challenges including climate change, sustainability, and conservation technologies.',
+        'Develop solutions for environmental challenges including climate change, sustainability and conservation technologies.',
       icon: <FaTree size={30} />,
     },
     {
@@ -27,19 +27,19 @@ const Tracks = () => {
     {
       title: 'Health',
       description:
-        'Build applications and systems to address healthcare challenges, patient care, and medical technology.',
+        'Build applications and systems to address healthcare challenges, patient care and medical technology.',
       icon: <FaHeartbeat size={30} />,
     },
     {
       title: 'Web3',
       description:
-        'Explore blockchain, decentralized applications, and the future of internet technologies.',
+        'Explore Blockchain, Decentralized Applications and the future of internet technologies.',
       icon: <FaCubes size={30} />,
     },
     {
-      title: 'AI/ML',
+      title: 'AI/ML & CI',
       description:
-        'Develop intelligent systems using artificial intelligence and machine learning to solve complex problems.',
+        'Develop intelligent systems using Artificial Intelligence, Machine Learning and Computational Intelligence to solve complex problems efficiently.',
       icon: <FaRobot size={30} />,
     },
     {

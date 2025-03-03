@@ -56,7 +56,7 @@ const NavItem = ({
       <a
         href={link}
         className={cn(
-          'text-md hover:text-md flex w-[84px] justify-center gap-5 rounded-none bg-black/0 font-pixelate text-sm text-white hover:font-bold hover:text-white',
+          'text-md hover:text-md flex justify-center gap-5 rounded-none bg-black/0 font-pixelate text-sm text-white hover:font-bold hover:text-white',
         )}
       >
         <span>{name}</span>
