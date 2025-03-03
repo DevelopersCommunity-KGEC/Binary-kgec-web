@@ -53,20 +53,36 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
     imageUrl = '',
 }) => {
     return (
+        // <a
+        //     href={url}
+        //     target='_blank'
+        //     rel='noreferrer'
+        //     className='flex justify-center items-center'
+        // >
+        //     <Image
+        //         src={imageUrl}
+        //         alt='Community Partner'
+        //         width={150}
+        //         height={150}
+        //         className='w-24 h-24 sm:w-28 sm:h-28 object-contain'
+        //     />
+        // </a >
         <a
             href={url}
-            target='_blank'
-            rel='noreferrer'
-            className='flex justify-center items-center'
+            target="_blank"
+            rel="noreferrer"
+            className="flex justify-center items-center"
         >
             <Image
                 src={imageUrl}
-                alt='Community Partner'
-                width={150}
-                height={150}
-                className='w-24 h-24 sm:w-28 sm:h-28 object-contain'
+                alt="Community Partner"
+                width={500}
+                height={500}
+                className="w-64 h-28 sm:w-64 sm:h-36 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]"
+            // className="w-24 h-24 sm:w-64 sm:h-36 object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)]"
             />
         </a>
+
     )
 }
 
@@ -81,8 +97,8 @@ const CommunityPartners = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
 
-        nextArrow: <CustomNextArrow />,
-        prevArrow: <CustomPrevArrow />,
+        nextArrow: <></>,
+        prevArrow: <></>,
 
         responsive: [
             {
@@ -119,7 +135,7 @@ const CommunityPartners = () => {
     return (
         <PageSection id="community-partners" className={isMobile ? `min-h-fit` : ''}>
             <Section>
-                <div className="mt-[96px] md:mt-[116px]">
+                <div className="mt-[36px] md:mt-[64px]">
                     <BinaryText
                         className="font-pixelate text-[2rem] font-bold text-white md:text-[3rem]"
                         reveal
