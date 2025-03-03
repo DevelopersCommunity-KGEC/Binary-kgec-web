@@ -7,9 +7,11 @@ import BinaryText from '../Animations/BinaryText'
 import styled from 'styled-components'
 import { CustomNextArrow, CustomPrevArrow } from '../Mentors';
 
+import { StaticImageData } from 'next/image';
+
 interface MemberComponentProps {
     url: string
-    imageUrl: string
+    imageUrl: string | StaticImageData
 }
 
 // Custom media query hook implementation
@@ -62,7 +64,7 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
                 alt='Community Partner'
                 width={150}
                 height={150}
-                className='w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain'
+                className='w-24 h-24 sm:w-28 sm:h-28 object-contain'
             />
         </a>
     )
@@ -167,7 +169,7 @@ const CommunityPartners = () => {
                         </Slider>
                     </div>
                 ) : (
-                    <div className='grid grid-cols-12 gap-4'>
+                    <div className='grid grid-cols-12 gap-6'>
                         {communityPartnersItems.map((item, index) => {
                             const lastRow = communityPartnersItems.length % 4;
                             if (lastRow === 0 || index < (communityPartnersItems.length - lastRow)) {

@@ -288,17 +288,29 @@ const Timeline = () => {
                 <div className="mt-[35%]">
                   <Data
                     head="Registration End"
-                    date="20th March"
+                    date="22th March"
                     des="Registration End"
                     links=""
                     add=""
                   />
                 </div>
                 <div className="mt-[47%]">
-                  <Data head="Hackathon Starts" date="TBD" des="Hackathon Starts" links="" add="" />
+                  <Data
+                    head="Hackathon Starts"
+                    date="29th March"
+                    des="Hackathon Starts"
+                    links=""
+                    add=""
+                  />
                 </div>
                 <div className="mt-[46%]">
-                  <Data head="Hackathon Ends" date="TBD" des="Hackathon Ends" links="" add="" />
+                  <Data
+                    head="30th March"
+                    date="TBD"
+                    des="Hackathon Ends"
+                    links=""
+                    add=""
+                  />
                 </div>
               </ul>
             </div>
@@ -329,7 +341,7 @@ const Timeline = () => {
               <div className="mb-[47%]">
                 <Data2
                   head="Submission of Projects"
-                  date="TBD"
+                  date="30th March"
                   des="Submission of Projects"
                   links=""
                   add=""
