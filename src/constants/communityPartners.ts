@@ -1,14 +1,14 @@
-import Ccju from '../../public/communityPartners/CCJU LOGO TRANSPARENT.png';
-import DDC from '../../public/communityPartners/DDC.svg';
-import Gde_aot from '../../public/communityPartners/GDG AOT.png';
-import Gde_gcelt from '../../public/communityPartners/GDG GCELT logo.png';
-import Gde_msit from '../../public/communityPartners/GDGC_msit_logo.svg';
-import Gde_nsec from '../../public/communityPartners/GDGCNSEC_LOGO.svg';
-import Gdeoc_bit from '../../public/communityPartners/GDGOC BIT Logo.png';
-import Igniters from '../../public/communityPartners/igniters_logo.svg';
-import Lnc from '../../public/communityPartners/LNC LOGO.svg';
-import Noo_build from '../../public/communityPartners/NooBuild.jpg';
-import Sourcify from '../../public/communityPartners/Sourcify-Logo.svg';
+import Ccju from '../../public/communityPartners/transparent/CCJU.png';
+import DDC from '../../public/communityPartners/transparent/DDC_Logo.png';
+import Gde_aot from '../../public/communityPartners/transparent/aot.png';
+import Gde_gcelt from '../../public/communityPartners/transparent/leather.png';
+import Gde_msit from '../../public/communityPartners/transparent/msit.png';
+import Gde_nsec from '../../public/communityPartners/transparent/nsec.png';
+import Gdeoc_bit from '../../public/communityPartners/transparent/bit.png';
+import Igniters from '../../public/communityPartners/transparent/igniters_logo.png';
+import Lnc from '../../public/communityPartners/transparent/LNC LOGO.png';
+import Noo_build from '../../public/communityPartners/transparent/noobuild.png';
+import Sourcify from '../../public/communityPartners/transparent/sourcify.png';
 
 export const communityPartnersItems = [
   {
