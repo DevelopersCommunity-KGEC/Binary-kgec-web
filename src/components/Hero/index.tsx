@@ -8,6 +8,9 @@ import logo from '@public/images/herologo.png';
 import { motion } from 'framer-motion';
 // import TypeAnimation2 from "./Textanimation";
 import { TypeAnimation } from 'react-type-animation';
+import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
+import '@leenguyen/react-flip-clock-countdown/dist/index.css';
+
 
 const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) => void }) => {
   return (
@@ -40,14 +43,14 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
           </div>*/}
         </div>
 
-        <div className="mt-2 flex w-full justify-center text-center md:mt-0 md:text-[1.5rem]">
+        {/* <div className="mt-2 flex w-full justify-center text-center md:mt-0 md:text-[1.5rem]">
           <span className="font-pixelate font-bold text-green-500 md:text-[1.5rem]">
             <TypeAnimation
               sequence={[500, `Until then, why don't you have a look around...`]}
               speed={80}
             />
           </span>
-        </div>
+        </div> */}
 
         <div className="mx-auto mt-16 flex flex-col gap-8 md:mt-0 md:flex-row">
           <div className="mt-4 flex w-full items-center justify-center md:mt-0 md:w-1/2">
@@ -84,6 +87,25 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
                 Discord Link
               </a>
             </div>
+          </div>
+        </div>
+        <div className="mt-2 w-full flex-col justify-center items-center text-center md:mt-0 font-pixelate font-bold text-green-500 md:text-[1.5rem]">
+          <div className="w-full">
+            <TypeAnimation
+              sequence={[1000, `Hacking starts in...`]}
+              speed={50}
+            />
+          </div>
+          <div className='flex justify-center items-center mt-4'>
+            <FlipClockCountdown
+              to={"2025-03-29T10:00:00"}
+              labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
+              labelStyle={{ fontSize: 10, fontWeight: 500, textTransform: 'uppercase' }}
+              digitBlockStyle={{ width: 40, height: 60, fontSize: 30 }}
+              dividerStyle={{ color: '#171', height: 1 }}
+              separatorStyle={{ color: 'grenn', size: '5px' }}
+              duration={0.5}
+            />
           </div>
         </div>
       </div>
