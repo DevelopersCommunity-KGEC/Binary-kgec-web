@@ -9,6 +9,7 @@ export const sponsors = [
         logo: avalancheSvg,
         link: 'https://www.avax.network/',
         alt: 'Avalanve svg',
+        description: 'Title Sponsor',
       },
     ],
   },
@@ -20,17 +21,14 @@ export const sponsors = [
   //   title: 'Mega Sponsor',
   //   sponsors: [],
   // },
-  // {
-  //   title: 'Kilo Sponsor',
-  //   sponsors: [],
-  // },
   {
-    title: 'Platform Partner',
+    title: 'Kilo Sponsor',
     sponsors: [
       {
         logo: hackquest,
         link: 'https://www.hackquest.io/',
         alt: 'hackquest svg',
+        description: 'Platform Partner',
       },
     ],
   },

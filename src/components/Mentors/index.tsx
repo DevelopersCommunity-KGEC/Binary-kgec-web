@@ -367,7 +367,7 @@ const Mentors: React.FC = () => {
 
   return (
     <PageSection id="mentors">
-      <div className="mt-[96px] md:mt-[116px]">
+      <div className="mt-[96px] md:mt-16">
         <BinaryText
           className="font-pixelate text-[2rem] font-bold text-white md:text-[3rem]"
           reveal

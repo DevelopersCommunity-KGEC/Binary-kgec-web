@@ -243,7 +243,7 @@ const Timeline = () => {
   return (
     <PageSection id="timeline">
       <div className="mb-10">
-        <div className="mx:text-[4rem] mb-10 mt-20 font-pixelate text-[3rem] font-bold text-white">
+        <div className="mx:text-[4rem] mb-10 mt-16 font-pixelate text-[3rem] font-bold text-white">
           <div className="shad relative w-full overflow-x-hidden pt-5 text-xl sm:hidden">
             <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold uppercase md:w-max md:max-w-max md:pt-0">
               <span className="flex-none pl-1 font-bold tracking-wider text-green-500 opacity-85">
@@ -288,7 +288,7 @@ const Timeline = () => {
                 <div className="mt-[35%]">
                   <Data
                     head="Registration End"
-                    date="22th March"
+                    date="22nd March"
                     des="Registration End"
                     links=""
                     add=""
@@ -305,8 +305,8 @@ const Timeline = () => {
                 </div>
                 <div className="mt-[46%]">
                   <Data
-                    head="30th March"
-                    date="TBD"
+                    head="Hackathon Ends"
+                    date="30th March"
                     des="Hackathon Ends"
                     links=""
                     add=""
