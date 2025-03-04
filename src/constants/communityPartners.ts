@@ -1,12 +1,12 @@
 import Ccju from '../../public/communityPartners/transparent/CCJU.png';
-import DDC from '../../public/communityPartners/transparent/DDC_Logo.png';
+import DDC from '../../public/communityPartners/transparent/ddc.png';
 import Gde_aot from '../../public/communityPartners/transparent/aot.png';
 import Gde_gcelt from '../../public/communityPartners/transparent/leather.png';
 import Gde_msit from '../../public/communityPartners/transparent/msit.png';
 import Gde_nsec from '../../public/communityPartners/transparent/nsec.png';
 import Gdeoc_bit from '../../public/communityPartners/transparent/bit.png';
-import Igniters from '../../public/communityPartners/transparent/igniters_logo.png';
-import Lnc from '../../public/communityPartners/transparent/LNC LOGO.png';
+import Igniters from '../../public/communityPartners/transparent/igniters.png';
+import Lnc from '../../public/communityPartners/transparent/lnc.png';
 import Noo_build from '../../public/communityPartners/transparent/noobuild.png';
 import Sourcify from '../../public/communityPartners/transparent/sourcify.png';
 

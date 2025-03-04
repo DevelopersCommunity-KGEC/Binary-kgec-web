@@ -8,6 +8,9 @@ import {
   FaCubes,
   FaRobot,
   FaLightbulb,
+  FaUsers,
+  FaAward,
+  FaStar,
 } from 'react-icons/fa';
 
 const Tracks = () => {
@@ -48,11 +51,29 @@ const Tracks = () => {
         'Create solutions for any problem statement of your choice using cutting-edge technologies.',
       icon: <FaLightbulb size={30} />,
     },
+    {
+      title: 'Best Beginners Team',
+      description:
+        'Awarded to the best performing team consisting of first-time participants.',
+      icon: <FaUsers size={30} />,
+    },
+    {
+      title: 'Best Girls Team',
+      description:
+        'Recognizing an all-girls team for their outstanding innovation and problem-solving skills.',
+      icon: <FaAward size={30} />,
+    },
+    {
+      title: 'People\'s Choice',
+      description:
+        'Given to the team that wins the most votes from the audience for their project.',
+      icon: <FaStar size={30} />,
+    },
   ];
 
   return (
-    <div id="tracks" className="mt-[96px] md:mt-[116px]">
-      <div className="mt-20 text-center">
+    <div id="tracks" className="mt-[96px] md:mt-16">
+      <div className="mt-16 text-center">
         <BinaryText
           className="font-pixelate text-[2rem] font-bold text-white md:text-[3rem]"
           reveal
@@ -99,12 +120,14 @@ const Tracks = () => {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {tracks.map((track, index) => (
-              <TrackCard
-                key={index}
-                title={track.title}
-                description={track.description}
-                icon={track.icon}
-              />
+              <div className={index == tracks.length - 1 ? 'col-span-1 md:col-span-2 md:mx-64' : ''} key={index}>
+                <TrackCard
+                  key={index}
+                  title={track.title}
+                  description={track.description}
+                  icon={track.icon}
+                />
+              </div>
             ))}
           </div>
         </div>

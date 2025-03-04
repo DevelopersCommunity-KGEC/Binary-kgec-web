@@ -1,16 +1,22 @@
 import PageSection from '@/hooks/PageSection';
 import BinaryText from '../Animations/BinaryText';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 // import useTextScramble from "../Animations/text";
 import { sponsors } from '@/constants/sponsors';
+interface Sponsor {
+  logo: string | StaticImageData;
+  link?: string;
+  alt: string;
+  description: string;
+}
 
 const Sponsors = () => {
   return (
     // <PageSection>
-    <div id="sponsors" className="mb-10 flex flex-col font-pixelate text-white sm:mb-10">
+    <div id="sponsors" className="flex flex-col font-pixelate text-white mt-28">
       <div>
-        <div className="mb-20">
+        <div className="mb-1">
           <BinaryText
             className="font-pixelate text-[2rem] font-bold text-white md:text-[3rem]"
             reveal
@@ -48,22 +54,53 @@ const Sponsors = () => {
 
         {sponsors.map((sponsorItem) => {
           console.log(sponsorItem, 'dfkn');
+
+          let gridClass = "grid w-[calc(80vw)] gap-4 rounded-lg bg-black/5 p-5 md:w-[calc(60vw)]";
+          let imageSizeClass = "w-[200px] h-[200px] "; // Default size
+
+          if (sponsorItem.title === 'Tera Sponsor') {
+            gridClass += " grid-cols-1";
+            imageSizeClass = "w-96 h-28  object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
+          } else if (sponsorItem.title === 'Giga Sponsor') {
+            gridClass += " grid-cols-3";
+            imageSizeClass = "w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
+          } else if (sponsorItem.title === 'Mega Sponsor') {
+            gridClass += " grid-cols-4";
+            imageSizeClass = "w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
+          } else if (sponsorItem.title === 'Kilo Sponsor') {
+            gridClass += " grid-cols-1";
+            imageSizeClass = "w-32 sm:w-28 h-16 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
+          } else {
+            gridClass += " grid-cols-5";
+          }
+
           return (
-            <div className="m-16 flex flex-col items-center justify-center" key={sponsorItem.title}>
-              <h2 className="mb-8 text-center text-[1.5em] font-bold md:text-[2rem]">
+            <div className="mb-16  flex flex-col items-center justify-center" key={sponsorItem.title}>
+              <h2 className="mb-2 text-center text-[1.5em] font-bold md:text-[2rem]">
                 {sponsorItem.title}
               </h2>
-              <div className="flex w-[calc(80vw)] grid-cols-1 items-center justify-center gap-4 rounded-lg bg-black/5 p-5 md:w-[calc(60vw)]">
+              <div className={gridClass}>
                 {sponsorItem.sponsors.length === 0 ? (
                   <div className="text-center" key="default">
                     Coming Soon...
                   </div>
                 ) : (
-                  sponsorItem.sponsors.map((sponsor) => (
-                    <div className="text-center" key={sponsor.link}>
-                      <Link href={sponsor.link}>
-                        <Image src={sponsor.logo} width={550} height={550} alt={sponsor.alt} />
-                      </Link>
+                  sponsorItem.sponsors.map((sponsor: Sponsor, index: number) => (
+                    <div className="text-center flex justify-center items-center" key={index}>
+                      <a
+                        target="_blank"
+                        href={sponsor.link}
+                        className='flex flex-col items-center justify-center'
+                      >
+                        <Image
+                          src={sponsor.logo}
+                          width={500}
+                          height={500}
+                          className={imageSizeClass}
+                          alt={sponsor.alt}
+                        />
+                        <span className='text-white'>{sponsor.description}</span>
+                      </a>
                     </div>
                   ))
                 )}
