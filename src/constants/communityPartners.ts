@@ -9,8 +9,13 @@ import Igniters from '../../public/communityPartners/transparent/igniters.png';
 import Lnc from '../../public/communityPartners/transparent/lnc.png';
 import Noo_build from '../../public/communityPartners/transparent/noobuild.png';
 import Sourcify from '../../public/communityPartners/transparent/sourcify.png';
+import Postman from '../../public/communityPartners/transparent/postman.png';
 
 export const communityPartnersItems = [
+  {
+    url: 'https://www.linkedin.com/company/postmancomkol/',
+    imageUrl: Postman,
+  },
   {
     url: 'https://www.linkedin.com/company/codeclub-ju/?originalSubdomain=in',
     imageUrl: Ccju,
