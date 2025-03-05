@@ -12,6 +12,7 @@ import {
   FaAward,
   FaStar,
 } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Tracks = () => {
   const tracks = [
@@ -71,6 +72,12 @@ const Tracks = () => {
     },
   ];
 
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setActiveCard((prev) => (prev === index ? null : index)); // Toggle the card
+  };
+
   return (
     <div id="tracks" className="mt-[96px] md:mt-16">
       <div className="mt-16 text-center">
@@ -126,6 +133,8 @@ const Tracks = () => {
                   title={track.title}
                   description={track.description}
                   icon={track.icon}
+                  isActive={activeCard === index}
+                  onToggle={() => handleToggle(index)}
                 />
               </div>
             ))}

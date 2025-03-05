@@ -330,8 +330,8 @@ const Mentors: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
 
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    nextArrow: <></>,
+    prevArrow: <></>,
 
     responsive: [
       {
