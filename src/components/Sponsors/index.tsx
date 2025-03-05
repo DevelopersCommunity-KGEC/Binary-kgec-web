@@ -24,7 +24,7 @@ const Sponsors = () => {
             <div className="shad relative w-full overflow-x-hidden pt-5 text-xl sm:hidden">
               <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold uppercase md:w-max md:max-w-max md:pt-0">
                 <span className="flex-none pl-1 font-bold tracking-wider text-green-500 opacity-85">
-                  07.
+                  06.
                 </span>
                 <span className="flex-none pl-2 font-bold tracking-wider text-gray-200 opacity-85">
                   Sponsors
@@ -38,7 +38,7 @@ const Sponsors = () => {
             <div className="shad relative hidden w-full overflow-x-hidden pt-5 sm:block">
               <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold md:w-max md:max-w-max md:pt-0">
                 <span className="flex-none pl-4 font-bold tracking-wider text-green-500 opacity-85">
-                  07.
+                  06.
                 </span>
                 <span className="flex-none pl-4 font-bold tracking-wider text-gray-200 opacity-85">
                   Sponsors
@@ -68,7 +68,7 @@ const Sponsors = () => {
             gridClass += " grid-cols-4";
             imageSizeClass = "w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else if (sponsorItem.title === 'Kilo Sponsor') {
-            gridClass += " grid-cols-1";
+            gridClass += " grid-cols-2";
             imageSizeClass = "w-32 sm:w-28 h-16 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else {
             gridClass += " grid-cols-5";

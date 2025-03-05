@@ -1,5 +1,6 @@
 import avalancheSvg from '../../public/sponsors/Avalanche.svg';
 import hackquest from '../../public/sponsors/hackquest.png';
+import balsamiq from '../../public/sponsors/balsamiq.png';
 
 export const sponsors = [
   {
@@ -29,6 +30,12 @@ export const sponsors = [
         link: 'https://www.hackquest.io/',
         alt: 'hackquest svg',
         description: 'Platform Partner',
+      },
+      {
+        logo: balsamiq,
+        link: 'https://balsamiq.com/',
+        alt: 'balsamiq svg',
+        description: 'Design Partner',
       },
     ],
   },
