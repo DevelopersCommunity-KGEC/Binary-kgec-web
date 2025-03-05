@@ -5,40 +5,14 @@ import Image from 'next/image'
 import PageSection from '@/hooks/PageSection'
 import BinaryText from '../Animations/BinaryText'
 import styled from 'styled-components'
-import { CustomNextArrow, CustomPrevArrow } from '../Mentors';
+// import { CustomNextArrow, CustomPrevArrow } from '../Mentors';
 
 import { StaticImageData } from 'next/image';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 interface MemberComponentProps {
     url: string
     imageUrl: string | StaticImageData
-}
-
-// Custom media query hook implementation
-const useMediaQuery = (query: string) => {
-    const [matches, setMatches] = useState(false)
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const media = window.matchMedia(query)
-            const updateMatch = () => setMatches(media.matches)
-
-            // Set initial value
-            updateMatch()
-
-            // Listen for changes
-            media.addEventListener('change', updateMatch)
-
-            // Clean up
-            return () => {
-                media.removeEventListener('change', updateMatch)
-            }
-        }
-
-        return undefined
-    }, [query])
-
-    return matches
 }
 
 const Section = styled.section<{ theme: { body: string } }>`
@@ -178,7 +152,7 @@ const CommunityPartners = () => {
                             className="ml-8 mr-8 flex items-center justify-center lg:ml-[4%] lg:mr-[4%]"
                         >
                             {communityPartnersItems.map((item, index) => (
-                                <MemberComponent url={item.url} imageUrl={item.imageUrl} />
+                                <MemberComponent url={item.url} imageUrl={item.imageUrl} key={index} />
 
                             ))}
 

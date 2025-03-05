@@ -10,9 +10,12 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
 import '@leenguyen/react-flip-clock-countdown/dist/index.css';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 
 const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) => void }) => {
+  const isMobile = useMediaQuery("(max-width: 767px)")
+
   return (
     <PageSection className="flex h-screen flex-col items-center justify-center">
       <div id="hero" ref={heroTopRef} className="flex flex-col justify-center gap-8">
@@ -101,9 +104,9 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
               to={"2025-03-29T10:00:00"}
               labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
               labelStyle={{ fontSize: 10, fontWeight: 500, textTransform: 'uppercase' }}
-              digitBlockStyle={{ width: 40, height: 60, fontSize: 30 }}
+              digitBlockStyle={isMobile ? { width: 30, height: 50, fontSize: 25 } : { width: 40, height: 60, fontSize: 30 }}
               dividerStyle={{ color: '#171', height: 1 }}
-              separatorStyle={{ color: 'grenn', size: '5px' }}
+              separatorStyle={{ color: 'green', size: '5px' }}
               duration={0.5}
             />
           </div>
