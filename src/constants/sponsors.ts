@@ -26,16 +26,21 @@ export const sponsors = [
     title: 'Kilo Sponsor',
     sponsors: [
       {
-        logo: hackquest,
-        link: 'https://www.hackquest.io/',
-        alt: 'hackquest svg',
-        description: 'Platform Partner',
-      },
-      {
         logo: balsamiq,
         link: 'https://balsamiq.com/',
         alt: 'balsamiq svg',
         description: 'Design Partner',
+      },
+    ],
+  },
+  {
+    title: 'Platform Partner',
+    sponsors: [
+      {
+        logo: hackquest,
+        link: 'https://www.hackquest.io/',
+        alt: 'hackquest svg',
+        description: '',
       },
     ],
   },

@@ -20,7 +20,7 @@ import { TypeAnimation } from 'react-type-animation';
 // Custom arrow component for previous
 export const CustomPrevArrow: React.FC = ({ onClick }: any) => (
   <div
-    className="custom-arrow absolute -left-[35px] top-1/2 -translate-y-1/2 transform"
+    className="custom-arrow absolute -left-[35px] top-1/2 -translate-y-1/2 transform cursor-pointer hidden sm:block"
     onClick={onClick}
   >
     <FaChevronLeft size={50} color="#fff" />
@@ -29,7 +29,7 @@ export const CustomPrevArrow: React.FC = ({ onClick }: any) => (
 
 export const CustomNextArrow: React.FC = ({ onClick }: any) => (
   <div
-    className="custom-arrow absolute -right-[35px] top-1/2 -translate-y-1/2 transform"
+    className="custom-arrow absolute -right-[35px] top-1/2 -translate-y-1/2 transform cursor-pointer hidden sm:block"
     onClick={onClick}
   >
     <FaChevronRight size={50} color="#fff" />
@@ -330,8 +330,8 @@ const Mentors: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
 
-    nextArrow: <></>,
-    prevArrow: <></>,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
 
     responsive: [
       {

@@ -10,8 +10,19 @@ import Lnc from '../../public/communityPartners/transparent/lnc.png';
 import Noo_build from '../../public/communityPartners/transparent/noobuild.png';
 import Sourcify from '../../public/communityPartners/transparent/sourcify.png';
 import Postman from '../../public/communityPartners/transparent/postman.png';
+import Ml_kol from '../../public/communityPartners/transparent/ml_kolkata.png';
+import Gdg_kol from '../../public/communityPartners/transparent/gdg_kol.png';
+import Unmasked from '../../public/communityPartners/transparent/unmasked.png';
 
 export const communityPartnersItems = [
+  {
+    url: 'https://www.commudle.com/communities/machine-learning-kolkata',
+    imageUrl: Ml_kol,
+  },
+  {
+    url: 'https://gdg.community.dev/gdg-kolkata/',
+    imageUrl: Gdg_kol,
+  },
   {
     url: 'https://www.linkedin.com/company/postmancomkol/',
     imageUrl: Postman,
@@ -59,5 +70,9 @@ export const communityPartnersItems = [
   {
     url: 'https://www.linkedin.com/company/sourcifyin/',
     imageUrl: Sourcify,
+  },
+  {
+    url: '',
+    imageUrl: Unmasked,
   },
 ];

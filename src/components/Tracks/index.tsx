@@ -11,6 +11,7 @@ import {
   FaUsers,
   FaAward,
   FaStar,
+  FaCloud,
 } from 'react-icons/fa';
 import { useState } from 'react';
 
@@ -47,6 +48,12 @@ const Tracks = () => {
       icon: <FaRobot size={30} />,
     },
     {
+      title: 'Cloud Computing',
+      description:
+        'Utilize Google Cloud for AI/ML, scalable computing, big data analytics, and secure cloud solutions.',
+      icon: <FaCloud size={30} />,
+    },
+    {
       title: 'Open Innovation',
       description:
         'Create solutions for any problem statement of your choice using cutting-edge technologies.',
@@ -54,8 +61,7 @@ const Tracks = () => {
     },
     {
       title: 'Best Beginners Team',
-      description:
-        'Awarded to the best performing team consisting of first-time participants.',
+      description: 'Awarded to the best performing team consisting of first-time participants.',
       icon: <FaUsers size={30} />,
     },
     {
@@ -65,7 +71,7 @@ const Tracks = () => {
       icon: <FaAward size={30} />,
     },
     {
-      title: 'People\'s Choice',
+      title: "People's Choice",
       description:
         'Given to the team that wins the most votes from the audience for their project.',
       icon: <FaStar size={30} />,
@@ -127,7 +133,14 @@ const Tracks = () => {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {tracks.map((track, index) => (
-              <div className={index == tracks.length - 1 ? 'col-span-1 md:col-span-2 md:mx-64' : ''} key={index}>
+              <div
+                className={
+                  tracks.length % 2 === 1 && index == tracks.length - 1
+                    ? 'col-span-1 md:col-span-2 md:mx-64'
+                    : ''
+                }
+                key={index}
+              >
                 <TrackCard
                   key={index}
                   title={track.title}
