@@ -332,7 +332,7 @@ const BadgeBuilder: React.FC = () => {
                                                 <img
                                                     src={image}
                                                     alt={`${name || "Hacker"}'s badge photo`}
-                                                    className="w-36 h-36 object-cover"
+                                                    className="w-36 h-36 object-contain"
                                                 />
                                                 {/* Corner brackets */}
                                                 <div className="absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-green-500"></div>
