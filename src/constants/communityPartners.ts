@@ -13,6 +13,7 @@ import Postman from '../../public/communityPartners/transparent/postman.png';
 import Ml_kol from '../../public/communityPartners/transparent/ml_kolkata.png';
 import Gdg_kol from '../../public/communityPartners/transparent/gdg_kol.png';
 import Unmasked from '../../public/communityPartners/transparent/unmasked.png';
+import TechJantaParty from '../../public/communityPartners/transparent/tech-janta-party.png';
 
 export const communityPartnersItems = [
   {
@@ -72,7 +73,11 @@ export const communityPartnersItems = [
     imageUrl: Sourcify,
   },
   {
-    url: '',
+    url: 'https://unmask.live',
     imageUrl: Unmasked,
   },
+  // {
+  //   url: 'https://techjantaparty.xyz',
+  //   imageUrl: TechJantaParty,
+  // },
 ];
