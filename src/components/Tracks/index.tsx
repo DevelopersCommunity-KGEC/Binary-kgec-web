@@ -12,6 +12,7 @@ import {
   FaAward,
   FaStar,
   FaCloud,
+  FaMicrochip,
 } from 'react-icons/fa';
 import { useState } from 'react';
 
@@ -44,7 +45,7 @@ const Tracks = () => {
     {
       title: 'AI/ML & CI',
       description:
-        'Develop intelligent systems using Artificial Intelligence, Machine Learning and Computational Intelligence to solve complex problems efficiently.',
+        'Develop intelligent systems using Artificial Intelligence, Machine Learning, and Computational Intelligence to solve complex problems efficiently. To be eligible for this track, teams must integrate Weights & Biases (W&B) for model training, experiment tracking, and performance visualization.',
       icon: <FaRobot size={30} />,
     },
     {
@@ -52,6 +53,12 @@ const Tracks = () => {
       description:
         'Utilize Google Cloud for AI/ML, scalable computing, big data analytics, and secure cloud solutions.',
       icon: <FaCloud size={30} />,
+    },
+    {
+      title: 'Hardware',
+      description:
+        'Design and prototype innovative hardware-based solutions, including IoT devices, embedded systems, and robotics.',
+      icon: <FaMicrochip size={30} />,
     },
     {
       title: 'Open Innovation',
