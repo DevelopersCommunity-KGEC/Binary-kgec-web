@@ -23,65 +23,87 @@ const Tracks = () => {
       description:
         'Develop solutions for environmental challenges including climate change, sustainability and conservation technologies.',
       icon: <FaTree size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Education',
       description:
         'Create innovative platforms and tools to revolutionize learning experiences and educational accessibility.',
       icon: <FaGraduationCap size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Health',
       description:
         'Build applications and systems to address healthcare challenges, patient care and medical technology.',
       icon: <FaHeartbeat size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Web3',
       description:
         'Explore Blockchain, Decentralized Applications and the future of internet technologies.',
       icon: <FaCubes size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'AI/ML & CI',
       description:
-        'Develop intelligent systems using Artificial Intelligence, Machine Learning, and Computational Intelligence to solve complex problems efficiently. To be eligible for this track, teams must integrate Weights & Biases (W&B) for model training, experiment tracking, and performance visualization.',
+        'Develop intelligent systems using AI, ML, and Computational Intelligence for efficient problem-solving. To be eligible for this track, teams must integrate Weights & Biases for model training, experiment tracking, and performance visualization.',
       icon: <FaRobot size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Cloud Computing',
       description:
         'Utilize Google Cloud for AI/ML, scalable computing, big data analytics, and secure cloud solutions.',
       icon: <FaCloud size={30} />,
+      totalPrice: '200 Google Cloud Credits',
+      cashPrice: '',
     },
     {
-      title: 'Hardware',
+      title: 'IOT',
       description:
-        'Design and prototype innovative hardware-based solutions, including IoT devices, embedded systems, and robotics.',
+        'Design and prototype innovative IOT solutions, embedded systems and robotics.',
       icon: <FaMicrochip size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Open Innovation',
       description:
         'Create solutions for any problem statement of your choice using cutting-edge technologies.',
       icon: <FaLightbulb size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Best Beginners Team',
       description: 'Awarded to the best performing team consisting of first-time participants.',
       icon: <FaUsers size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: 'Best Girls Team',
       description:
         'Recognizing an all-girls team for their outstanding innovation and problem-solving skills.',
       icon: <FaAward size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
     {
       title: "People's Choice",
       description:
         'Given to the team that wins the most votes from the audience for their project.',
       icon: <FaStar size={30} />,
+      totalPrice: '5K',
+      cashPrice: '3K',
     },
   ];
 
@@ -153,6 +175,8 @@ const Tracks = () => {
                   title={track.title}
                   description={track.description}
                   icon={track.icon}
+                  totalPrice={track.totalPrice}
+                  cashPrice={track.cashPrice}
                   isActive={activeCard === index}
                   onToggle={() => handleToggle(index)}
                 />

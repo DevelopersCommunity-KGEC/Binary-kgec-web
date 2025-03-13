@@ -13,7 +13,7 @@ import Postman from '../../public/communityPartners/transparent/postman.png';
 import Ml_kol from '../../public/communityPartners/transparent/ml_kolkata.png';
 import Gdg_kol from '../../public/communityPartners/transparent/gdg_kol.png';
 import Unmasked from '../../public/communityPartners/transparent/unmasked.png';
-import TechJantaParty from '../../public/communityPartners/transparent/tech-janta-party.png';
+import Tjp from '../../public/communityPartners/transparent/tjp.png';
 
 export const communityPartnersItems = [
   {
@@ -27,6 +27,10 @@ export const communityPartnersItems = [
   {
     url: 'https://www.linkedin.com/company/postmancomkol/',
     imageUrl: Postman,
+  },
+  {
+    url: 'https://lnc-community.vercel.app/',
+    imageUrl: Lnc,
   },
   {
     url: 'https://www.linkedin.com/company/codeclub-ju/?originalSubdomain=in',
@@ -61,10 +65,6 @@ export const communityPartnersItems = [
     imageUrl: Igniters,
   },
   {
-    url: 'https://lnc-community.vercel.app/',
-    imageUrl: Lnc,
-  },
-  {
     url: 'https://www.noobuild.in/',
     imageUrl: Noo_build,
   },
@@ -76,8 +76,8 @@ export const communityPartnersItems = [
     url: 'https://unmask.live',
     imageUrl: Unmasked,
   },
-  // {
-  //   url: 'https://techjantaparty.xyz',
-  //   imageUrl: TechJantaParty,
-  // },
+  {
+    url: 'https://techjantaparty.xyz',
+    imageUrl: Tjp,
+  },
 ];

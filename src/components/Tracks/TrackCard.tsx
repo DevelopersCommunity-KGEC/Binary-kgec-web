@@ -45,11 +45,13 @@ interface TrackCardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
+  totalPrice: string;
+  cashPrice: string;
   isActive: boolean;
   onToggle: () => void;
 }
 
-const TrackCard: React.FC<TrackCardProps> = ({ title, description, icon, isActive, onToggle }) => {
+const TrackCard: React.FC<TrackCardProps> = ({ title, description, icon, totalPrice, cashPrice, isActive, onToggle }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -65,10 +67,19 @@ const TrackCard: React.FC<TrackCardProps> = ({ title, description, icon, isActiv
 
         {/* Overlay appears on hover OR when active */}
         <div
-          className={`description-overlay absolute inset-0 flex items-center justify-center rounded-lg bg-black/90 p-4 backdrop-blur-sm transition-opacity duration-300 ${isHovered || isActive ? 'opacity-100' : 'opacity-0'
+          className={`description-overlay absolute inset-0 flex flex-col items-center justify-evenly rounded-lg bg-black/90 p-4 backdrop-blur-sm transition-opacity duration-300 ${isHovered || isActive ? 'opacity-100' : 'opacity-0'
             }`}
         >
-          <p className="font-pixelate text-sm text-green-400">{description}</p>
+          <p className="font-pixelate text-xs md:text-sm text-green-400">{description}</p>
+          <div className='w-full flex gap-2 items-center justify-center' >
+            <p className="font-pixelate text-sm md:text-base text-gray-100 font-bold">Total Price: {totalPrice}</p>
+            {cashPrice && (
+              <>
+                <div className='h-full w-0.5 mx-2 bg-white'></div>
+                <p className="font-pixelate text-xs md:text-sm text-green-400">Cash Price: {cashPrice}</p>
+              </>
+            )}
+          </div>
         </div>
       </div>
 

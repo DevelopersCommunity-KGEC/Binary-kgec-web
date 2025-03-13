@@ -50,7 +50,7 @@ const FAQs = () => {
             </BinaryText>
           </div>
           <div className="mx-auto mt-8 min-w-full space-y-4 font-pixelate font-[1rem] md:mt-16 md:w-[calc(50vw)] md:font-[2rem]">
-            <ul className="mx-auto mt-20 max-w-7xl divide-y-[0.1px] divide-[#393939] rounded-xl shadow-md">
+            <ul className="mx-auto max-w-7xl divide-y-[0.1px] divide-[#393939] rounded-xl shadow-md">
               {faqItems.map((faq, index) => {
                 return (
                   <li key={index} className="group">
@@ -60,7 +60,7 @@ const FAQs = () => {
                       }}
                       className="flex items-center justify-between px-5 py-5 font-bold marker:content-none hover:cursor-pointer"
                     >
-                      <span className="text-lg max-w-[72vw] text-white/85">{faq.question}</span>
+                      <span className="text-base md:text-lg max-w-[72vw] text-white/85">{faq.question}</span>
 
                       <svg
                         className={`h-5 w-5 text-gray-400 transition group-hover:text-gray-300 group-active:text-gray-200 ${expandedItemIndex === index ? 'rotate-90' : ''
@@ -81,7 +81,7 @@ const FAQs = () => {
                     <AnimatePresence>
                       {expandedItemIndex === index && (
                         <motion.div
-                          className="bg-gr0 pb-4 text-base"
+                          className="bg-gr0 pb-4 text-sm md:text-base"
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}

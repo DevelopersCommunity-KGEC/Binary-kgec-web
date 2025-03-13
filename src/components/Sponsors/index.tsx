@@ -72,16 +72,16 @@ const Sponsors = () => {
             imageSizeClass = "w-32 sm:w-28 h-16 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else if (sponsorItem.title === 'Platform Partner') {
             gridClass += " grid-cols-1";
-            imageSizeClass = "w-28 sm:w-28 h-24 object-contain";
+            imageSizeClass = "w-16 sm:w-20 h-24 object-contain b@1Er-website";
           } else {
             gridClass += " grid-cols-5";
           }
 
           return (
-            <div className="mb-16  flex flex-col items-center justify-center" key={sponsorItem.title}>
-              <h2 className="mb-2 text-center text-[1.5em] font-bold md:text-[2rem]">
+            <div className="mb-0 flex flex-col items-center justify-center" key={sponsorItem.title}>
+              {/* <h2 className="mb-2 text-center text-[1.5em] font-bold md:text-[2rem]">
                 {sponsorItem.title}
-              </h2>
+              </h2> */}
               <div className={gridClass}>
                 {sponsorItem.sponsors.length === 0 ? (
                   <div className="text-center" key="default">
