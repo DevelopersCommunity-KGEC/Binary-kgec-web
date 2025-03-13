@@ -5,10 +5,10 @@ import PageSection from '@/hooks/PageSection';
 import styled from 'styled-components';
 import * as demoProfileImg from '@public/images/demoprofile.png';
 import * as demoProfileImg2 from '@public/images/demoprofile.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React, { Component } from 'react';
 import Link from 'next/link';
-import { Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import { buttonVariants } from '../ui/button';
 import { cn } from '@/lib/utils';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -16,6 +16,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import logo from '@public/images/binarylogo2.png';
 import { TypeAnimation } from 'react-type-animation';
+import { mentors } from '@/constants/mentors';
 
 // Custom arrow component for previous
 export const CustomPrevArrow: React.FC = ({ onClick }: any) => (
@@ -46,7 +47,7 @@ export const CustomNextArrow: React.FC = ({ onClick }: any) => (
 
 interface MemberComponentProps {
   imgurl: {
-    src: string;
+    src: StaticImageData | string;
     width: number;
     height: number;
   };
@@ -54,6 +55,7 @@ interface MemberComponentProps {
   position?: string;
   linkedinUrl: string;
   twitterUrl: string;
+  githubUrl: string;
 }
 
 // Styled component for the section
@@ -259,6 +261,7 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
   position = ' ',
   linkedinUrl = '',
   twitterUrl = '',
+  githubUrl = '',
 }) => {
   return (
     <>
@@ -269,8 +272,8 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
               <div className="card w-fit bg-neutral-800/60 shadow-md shadow-green-700/75">
                 <ImageContainer className="image-container flex w-[8rem] flex-col items-center justify-center py-3 md:py-7">
                   <Image
-                    className="hover: overflow-hidden rounded-full border-2 border-solid border-white/90 bg-neutral-800 p-1"
-                    src={imgurl.src} // Use the imported image URL here
+                    className="hover:overflow-hidden rounded-full border-2 border-solid border-white/90 bg-neutral-800 p-1"
+                    src={imgurl.src === '' ? demoProfileImg.default.src : imgurl.src} // Use the imported image URL here
                     alt={name}
                     width={imgurl.width} // Specify the width
                     height={imgurl.height} // Specify the height
@@ -278,32 +281,49 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
                 </ImageContainer>
                 <div className="imgBx"></div>
                 <div className="contentBx">
-                  <div className="text-md mx-auto text-center font-pixelate text-white md:text-lg">
+                  <div className={`${name.length >= 15 ? 'tracking-tight [word-spacing:-5px]' : ''} text-lg mx-auto text-center font-pixelate text-white md:text-lg whitespace-nowrap`}>
                     {name}
                   </div>
-                  <div className="ml-10 mr-10 flex flex-row items-center justify-center">
-                    <Link
-                      href={twitterUrl}
-                      className={cn(
-                        buttonVariants({ variant: 'link' }),
-                        'text-white hover:text-green-600',
-                      )}
-                    >
-                      <Twitter />
-                    </Link>
+                  <div className="mx-10 flex flex-row items-center justify-center">
+                    {twitterUrl !== '' && (
+                      <a
+                        href={twitterUrl}
+                        className={cn(
+                          buttonVariants({ variant: 'link' }),
+                          'text-white hover:text-green-600',
+                        )}
+                        target='_blank'
+                      >
+                        <Twitter />
+                      </a>
+                    )}
 
-                    <Link
-                      href={linkedinUrl}
-                      className={cn(
-                        buttonVariants({ variant: 'link' }),
-                        'text-white hover:text-green-600',
-                      )}
-                    >
-                      <Linkedin />
-                    </Link>
+                    {linkedinUrl !== '' && (
+                      <a
+                        href={linkedinUrl}
+                        className={cn(
+                          buttonVariants({ variant: 'link' }),
+                          'text-white hover:text-green-600',
+                        )}
+                        target='_blank'
+                      >
+                        <Linkedin />
+                      </a>
+                    )}
+                    {/* {githubUrl !== '' && (
+                      <a
+                        href={githubUrl}
+                        className={cn(
+                          buttonVariants({ variant: 'link' }),
+                          'text-white hover:text-green-600'
+                        )}
+                        target='_blank'>
+                        <Github />
+                      </a>
+                    )} */}
                   </div>
                 </div>
-                <div className="relative -bottom-[210px] justify-center text-center font-pixelate text-lg text-green-500 md:-bottom-[180px]">
+                <div className="relative text-base -bottom-[210px] justify-center text-center font-pixelate text-green-500 md:-bottom-[180px]">
                   {position}
                 </div>
               </div>
@@ -409,7 +429,19 @@ const Mentors: React.FC = () => {
             {...sliderSettings}
             className="ml-8 mr-8 flex items-center justify-center lg:ml-[4%] lg:mr-[4%]"
           >
-            <MemberComponent
+            {
+              mentors.map((mentor) => (
+                <MemberComponent
+                  imgurl={{ src: mentor.imageUrl, width: 50, height: 50 }}
+                  name={mentor.name}
+                  position={mentor.position}
+                  twitterUrl={mentor.twitterUrl}
+                  linkedinUrl={mentor.linkedinUrl}
+                  githubUrl={mentor.githubUrl}
+                />
+              ))
+            }
+            {/* <MemberComponent
               imgurl={{ src: demoProfileImg.default.src, width: 50, height: 50 }}
               name="Demo Profile 1"
               position="Position"
@@ -471,7 +503,7 @@ const Mentors: React.FC = () => {
               position="Position"
               twitterUrl=""
               linkedinUrl=""
-            />
+            /> */}
 
             {/* ... other MemberComponent instances */}
           </Slider>
