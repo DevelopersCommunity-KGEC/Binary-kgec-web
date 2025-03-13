@@ -20,8 +20,12 @@ const Section = styled.section<{ theme: { body: string } }>`
 const DelayedComponent = () => {
   const phrases1 = ['By'];
   const phrases2 = ['DEV-Community-KGEC'];
+  const phrases3 = ['In Collaboration with'];
+  const phrases4 = ['IEEE CIS Student Chapter - Kalyani'];
   const textRef = useTextScramble(phrases1);
   const textRef2 = useTextScramble(phrases2);
+  const textRef3 = useTextScramble(phrases3);
+  const textRef4 = useTextScramble(phrases4);
 
   return (
     <Section>
@@ -36,6 +40,18 @@ const DelayedComponent = () => {
           <div
             className="shad md:text-1xl mt-2 text-center font-pixelate text-lg font-bold uppercase text-white opacity-100 sm:text-xl lg:text-2xl xl:text-3xl"
             ref={textRef2}
+          ></div>
+        </div>
+        <div className="">
+          <div
+            className="shad text-xs md:text-base mt-2 text-center font-pixelate uppercase text-white opacity-100"
+            ref={textRef3}
+          ></div>
+        </div>
+        <div className="">
+          <div
+            className="shad text-xs md:text-base mt-2 text-center font-pixelate uppercase text-white opacity-100"
+            ref={textRef4}
           ></div>
         </div>
       </div>
@@ -120,7 +136,7 @@ const Home: React.FC = () => {
             <div className="relative flex-1">{showFunction1 ? function2() : function3()}</div>
           </div>
 
-          <div className="mt-5 md:mt-10">{showDelayedComponent && <DelayedComponent />}</div>
+          <div className="mt-5 md:mt-6">{showDelayedComponent && <DelayedComponent />}</div>
 
           <motion.div
             className="mt-4 flex flex-col items-center justify-center md:flex-row"

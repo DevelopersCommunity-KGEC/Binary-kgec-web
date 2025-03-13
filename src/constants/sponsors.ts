@@ -55,7 +55,7 @@ export const sponsors = [
         logo: hackquest,
         link: 'https://www.hackquest.io/',
         alt: 'hackquest logo',
-        description: '',
+        description: 'Platform Partner',
       },
     ],
   },
