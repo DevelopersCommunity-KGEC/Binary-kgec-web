@@ -6,7 +6,8 @@ import { RiMenu4Line } from 'react-icons/ri';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, Transition } from '@headlessui/react';
 import { useGlitch } from 'react-powerglitch';
-import NavLogo from '@public/images/binarylogo2.png';
+// import NavLogo from '@public/images/binarylogo2.png';
+import NavLogo from '@public/images/thumbnail.png';
 import NavItem from './NavItem';
 import { navItems } from '@/constants/navItems';
 
@@ -81,11 +82,11 @@ const Navbar = () => {
             // height={auto}
             // width={12}
             alt="/"
-            className="px-2  w-[13%] cursor-pointer md:w-[12%]"
+            className="px-2 w-[27%] cursor-pointer md:w-[20%]"
           />
         </Link>
         <div>
-          <ul className="mr-11 hidden font-pixelate text-white md:flex">
+          <ul className="mr-11 hidden font-pixelate text-white md:flex w-fit">
             <ul className="flex gap-6">
               {navItems.map((item) => (
                 <NavItem key={item.name} name={item.name} link={item.link} isActive={false} />
