@@ -331,9 +331,9 @@ const Timeline = () => {
               </div>
               <div className="mb-[47%]">
                 <Data2
-                  head="Approvals Roll out"
-                  date="TBD"
-                  des="Approvals Roll out"
+                  head="Approvals Roll Out"
+                  date="16th-23rd March"
+                  des="Approvals Roll Out"
                   links=""
                   add=""
                 />
