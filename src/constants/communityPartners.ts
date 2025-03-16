@@ -11,7 +11,7 @@ import Noo_build from '../../public/communityPartners/transparent/noobuild.png';
 import Sourcify from '../../public/communityPartners/transparent/sourcify.png';
 import Postman from '../../public/communityPartners/transparent/postman.png';
 import Ml_kol from '../../public/communityPartners/transparent/ml_kolkata.png';
-import Gdg_kol from '../../public/communityPartners/transparent/gdg_kol.png';
+import Gdg_cloud_kol from '../../public/communityPartners/transparent/gdg_cloud_kol.png';
 import Unmasked from '../../public/communityPartners/transparent/unmasked.png';
 import Tjp from '../../public/communityPartners/transparent/tjp.png';
 
@@ -21,8 +21,8 @@ export const communityPartnersItems = [
     imageUrl: Ml_kol,
   },
   {
-    url: 'https://gdg.community.dev/gdg-kolkata/',
-    imageUrl: Gdg_kol,
+    url: 'https://gdg.community.dev/gdg-cloud-kolkata/',
+    imageUrl: Gdg_cloud_kol,
   },
   {
     url: 'https://www.linkedin.com/company/postmancomkol/',

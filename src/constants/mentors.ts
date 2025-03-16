@@ -7,6 +7,7 @@ import MeghDeb from '../../public/mentors/MeghDeb.png';
 import NarendraNathChatterjee from '../../public/mentors/NarendraNathChatterjee.png';
 import SupratimDhara from '../../public/mentors/SupratimDhara.png';
 import AdvaitaSaha from '../../public/mentors/AdvaitaSaha.png';
+import SanglapMridha from '../../public/mentors/SanglapMridha.png';
 
 export const mentors = [
   {
@@ -80,6 +81,14 @@ export const mentors = [
     twitterUrl: 'https://x.com/supratimtwt',
     linkedinUrl: 'https://www.linkedin.com/in/supratimdhara/',
     githubUrl: 'https://github.com/supratim1609',
+  },
+  {
+    name: 'Sanglap Mridha',
+    imageUrl: SanglapMridha,
+    position: 'SWE at Altor',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/sanglapmridha/',
+    githubUrl: '',
   },
   //   {
   //     name: 'Demo Mentor',

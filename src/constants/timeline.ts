@@ -11,8 +11,8 @@ export const timeline = [
   },
   {
     title: 'Approvals Roll out',
-    date: 'TBD',
-    description: 'Approvals Roll out',
+    date: '16th-23rd March',
+    description: 'Approvals Roll Out',
   },
   {
     title: 'Hackathon Starts',
