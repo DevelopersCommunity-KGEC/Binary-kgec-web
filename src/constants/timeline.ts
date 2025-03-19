@@ -6,12 +6,12 @@ export const timeline = [
   },
   {
     title: 'Registration End',
-    date: '22nd March',
+    date: '25th March',
     description: 'Registration End',
   },
   {
     title: 'Approvals Roll out',
-    date: '16th-23rd March',
+    date: '16th-26th March',
     description: 'Approvals Roll Out',
   },
   {
