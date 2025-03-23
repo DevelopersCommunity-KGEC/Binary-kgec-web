@@ -1,7 +1,10 @@
 import avalancheSvg from '../../public/sponsors/Avalanche.svg';
+
 import wandb from '../../public/sponsors/wandb.png';
 import balsamiq from '../../public/sponsors/balsamiq.png';
 import xyz from '../../public/sponsors/xyz.png';
+import rabbitt from '../../public/sponsors/rabbitt.png';
+
 import hackquest from '../../public/sponsors/hackquest.png';
 
 export const sponsors = [
@@ -45,6 +48,12 @@ export const sponsors = [
         link: 'https://gen.xyz/',
         alt: 'xyz logo',
         description: 'Domain Partner',
+      },
+      {
+        logo: rabbitt,
+        link: 'https://rabbitt.ai/',
+        alt: 'rabbitt-ai logo',
+        description: 'Upskilling Partner',
       },
     ],
   },

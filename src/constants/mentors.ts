@@ -8,6 +8,9 @@ import NarendraNathChatterjee from '../../public/mentors/NarendraNathChatterjee.
 import SupratimDhara from '../../public/mentors/SupratimDhara.png';
 import AdvaitaSaha from '../../public/mentors/AdvaitaSaha.png';
 import SanglapMridha from '../../public/mentors/SanglapMridha.png';
+import AyushThakur from '../../public/mentors/AyushThakur.png';
+import KrishnaBose from '../../public/mentors/KrishnaBose.png';
+import AnkanChatterjee from '../../public/mentors/AnkanChatterjee.png';
 
 export const mentors = [
   {
@@ -40,6 +43,30 @@ export const mentors = [
     position: 'Senior Executive - Risk Advisory, Deloitte',
     twitterUrl: '',
     linkedinUrl: 'https://www.linkedin.com/in/imranfosec/',
+    githubUrl: '',
+  },
+  {
+    name: 'Ayush Thakur',
+    imageUrl: AyushThakur,
+    position: 'ML Engineer, Weights and Biases',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/ayush-thakur-731914149/',
+    githubUrl: '',
+  },
+  {
+    name: 'Krishna Bose',
+    imageUrl: KrishnaBose,
+    position: 'Head of Engineering, TagMango',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/krishnabose/',
+    githubUrl: '',
+  },
+  {
+    name: 'Ankan Chatterjee',
+    imageUrl: AnkanChatterjee,
+    position: 'Management Consultant, Cognizant',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/ankan-chatterjee33/',
     githubUrl: '',
   },
   {
