@@ -68,11 +68,11 @@ const Sponsors = () => {
             gridClass += " grid-cols-1";
             imageSizeClass = "w-56 sm:w-64 h-24 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else if (sponsorItem.title === 'Kilo Sponsor') {
-            gridClass += " grid-cols-2";
+            gridClass += " grid-cols-3";
             imageSizeClass = "w-32 sm:w-28 h-16 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else if (sponsorItem.title === 'Platform Partner') {
             gridClass += " grid-cols-1";
-            imageSizeClass = "w-16 sm:w-20 h-24 object-contain b@1Er-website";
+            imageSizeClass = "w-16 sm:w-20 h-24 object-contain baler-website";
           } else {
             gridClass += " grid-cols-5";
           }
