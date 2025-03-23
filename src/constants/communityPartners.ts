@@ -14,6 +14,7 @@ import Ml_kol from '../../public/communityPartners/transparent/ml_kolkata.png';
 import Gdg_cloud_kol from '../../public/communityPartners/transparent/gdg_cloud_kol.png';
 import Unmasked from '../../public/communityPartners/transparent/unmasked.png';
 import Tjp from '../../public/communityPartners/transparent/tjp.png';
+import Flutter_kol from '../../public/communityPartners/transparent/flutter_kol.png';
 
 export const communityPartnersItems = [
   {
@@ -55,6 +56,10 @@ export const communityPartnersItems = [
   {
     url: 'https://gdg.community.dev/gdg-on-campus-netaji-subhash-engineering-college-kolkata-india/',
     imageUrl: Gde_nsec,
+  },
+  {
+    url: 'https://www.linkedin.com/company/flutter-kolkata/',
+    imageUrl: Flutter_kol,
   },
   {
     url: 'https://gdg.community.dev/gdg-on-campus-bengal-institute-of-technology-kolkata-india/',
