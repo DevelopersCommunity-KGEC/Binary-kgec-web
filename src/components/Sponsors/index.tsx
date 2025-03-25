@@ -68,7 +68,7 @@ const Sponsors = () => {
             gridClass += " grid-cols-1";
             imageSizeClass = "w-56 sm:w-64 h-24 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else if (sponsorItem.title === 'Kilo Sponsor') {
-            gridClass += " grid-cols-3";
+            gridClass += " grid-cols-4";
             imageSizeClass = "w-32 sm:w-28 h-16 object-contain drop-shadow-[0_5px_10px_rgba(14,180,32,0.5)]";
           } else if (sponsorItem.title === 'Platform Partner') {
             gridClass += " grid-cols-1";
