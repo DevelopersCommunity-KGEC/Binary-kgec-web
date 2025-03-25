@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       'Binary - KGEC Hackathon 2025 brings together innovators to build meaningful solutions across diverse tracks like Web3, Medical Tech, and more.',
     images: [
       {
-        url: 'https://www.binary.kgec.tech/images/herologo.png',
+        url: 'https://www.binary.kgec.tech/images/binaryDP.png',
         width: 1200,
         height: 630,
         alt: 'Binary - KGEC Hackathon 2025 Banner',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Binary - KGEC Hackathon 2025',
     description:
       'A technical hackathon fostering innovation and collaboration. Join us to create impactful solutions in Web3, Medical Tech, and other domains.',
-    images: 'https://www.binary.kgec.tech/images/herologo.png',
+    images: 'https://www.binary.kgec.tech/images/binaryDP.png',
   },
 };
 
