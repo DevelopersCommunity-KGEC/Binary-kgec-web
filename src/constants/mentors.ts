@@ -13,6 +13,7 @@ import KrishnaBose from '../../public/mentors/KrishnaBose.png';
 import BinayGupta from '../../public/mentors/BinayGupta.jpeg';
 import DebayanPradhan from '../../public/mentors/DebayanPradhan.png';
 import KrishnenduDakshi from '../../public/mentors/KrishnenduDakshi.jpg';
+import DeepBera from '../../public/mentors/DeepBera.jpeg';
 
 export const mentors = [
   {
@@ -133,6 +134,14 @@ export const mentors = [
     position: 'SWE at Altor',
     twitterUrl: '',
     linkedinUrl: 'https://www.linkedin.com/in/sanglapmridha/',
+    githubUrl: '',
+  },
+  {
+    name: 'Deep Bera',
+    imageUrl: DeepBera,
+    position: 'AI Scientist, GE HealthCare',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/deepbera/',
     githubUrl: '',
   },
   //   {
