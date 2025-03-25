@@ -10,10 +10,15 @@ const sfPixelate = localFont({ src: '../../public/fonts/SFPixelate.ttf' });
 const poppins = localFont({ src: '../../public/fonts/Poppins/Poppins-Bold.ttf' });
 
 export const metadata: Metadata = {
-  title: 'KGEC Hackathon 2025',
+  title: 'Binary - KGEC Hackathon 2025',
   description:
-    'Join KGEC Hackathon 2025, a platform for innovation and collaboration. Build impactful solutions across tracks like Web3, Open Innovation, Medical Tech, and more. Unite with tech enthusiasts to shape the future.',
+    'Join Binary - KGEC Hackathon 2025, a platform for innovation and collaboration. Build impactful solutions across tracks like Web3, Open Innovation, Medical Tech, and more. Unite with tech enthusiasts to shape the future.',
   keywords: [
+    'Binary Hackathon',
+    'KGEC Hackathon 2025',
+    'Binary KGEC',
+    'Binary 2025',
+    'Binary KGEC tech',
     'KGEC Hackathon',
     'hackathon 2025',
     'technical innovation',
@@ -37,26 +42,26 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: 'https://kgechackathon2025.com',
-    title: 'KGEC Hackathon 2025',
+    url: 'https://www.binary.kgec.tech/',
+    title: 'Binary - KGEC Hackathon 2025',
     description:
-      'KGEC Hackathon 2025 brings together innovators to build meaningful solutions across diverse tracks like Web3, Medical Tech, and more.',
+      'Binary - KGEC Hackathon 2025 brings together innovators to build meaningful solutions across diverse tracks like Web3, Medical Tech, and more.',
     images: [
       {
-        url: 'https://kgechackathon2025.com/assets/kgec-hackathon-banner.jpg',
+        url: 'https://www.binary.kgec.tech/images/herologo.png',
         width: 1200,
         height: 630,
-        alt: 'KGEC Hackathon 2025 Banner',
+        alt: 'Binary - KGEC Hackathon 2025 Banner',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@KGECHackathon',
-    title: 'KGEC Hackathon 2025',
+    site: '@BinaryKgec',
+    title: 'Binary - KGEC Hackathon 2025',
     description:
       'A technical hackathon fostering innovation and collaboration. Join us to create impactful solutions in Web3, Medical Tech, and other domains.',
-    images: 'https://kgechackathon2025.com/assets/kgec-hackathon-banner.jpg',
+    images: 'https://www.binary.kgec.tech/images/herologo.png',
   },
 };
 
