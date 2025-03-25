@@ -1,9 +1,11 @@
 import avalancheSvg from '../../public/sponsors/Avalanche.svg';
 
 import wandb from '../../public/sponsors/wandb.png';
+
 import balsamiq from '../../public/sponsors/balsamiq.png';
 import xyz from '../../public/sponsors/xyz.png';
 import rabbitt from '../../public/sponsors/rabbitt.png';
+import interviewBuddy from '../../public/sponsors/interview_buddy.svg';
 
 import hackquest from '../../public/sponsors/hackquest.png';
 
@@ -54,6 +56,12 @@ export const sponsors = [
         link: 'https://rabbitt.ai/',
         alt: 'rabbitt-ai logo',
         description: 'Upskilling Partner',
+      },
+      {
+        logo: interviewBuddy,
+        link: 'https://interviewbuddy.net/',
+        alt: 'interviewBuddy logo',
+        description: 'Interview Partner',
       },
     ],
   },

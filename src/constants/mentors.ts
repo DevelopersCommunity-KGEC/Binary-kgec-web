@@ -10,7 +10,9 @@ import AdvaitaSaha from '../../public/mentors/AdvaitaSaha.png';
 import SanglapMridha from '../../public/mentors/SanglapMridha.png';
 import AyushThakur from '../../public/mentors/AyushThakur.png';
 import KrishnaBose from '../../public/mentors/KrishnaBose.png';
-import AnkanChatterjee from '../../public/mentors/AnkanChatterjee.png';
+import BinayGupta from '../../public/mentors/BinayGupta.jpeg';
+import DebayanPradhan from '../../public/mentors/DebayanPradhan.png';
+import KrishnenduDakshi from '../../public/mentors/KrishnenduDakshi.jpg';
 
 export const mentors = [
   {
@@ -62,11 +64,27 @@ export const mentors = [
     githubUrl: '',
   },
   {
-    name: 'Ankan Chatterjee',
-    imageUrl: AnkanChatterjee,
-    position: 'Management Consultant, Cognizant',
+    name: 'Binay Gupta',
+    imageUrl: BinayGupta,
+    position: 'Data Scientist, Walmart Global Tech',
     twitterUrl: '',
-    linkedinUrl: 'https://www.linkedin.com/in/ankan-chatterjee33/',
+    linkedinUrl: 'https://www.linkedin.com/in/binay-gupta-iitb/',
+    githubUrl: '',
+  },
+  {
+    name: 'Krishnendu Dakshi',
+    imageUrl: KrishnenduDakshi,
+    position: 'SDE, Tag Mango',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/krishnendu-dakshi-624208224/',
+    githubUrl: '',
+  },
+  {
+    name: 'Debayan Pradhan',
+    imageUrl: DebayanPradhan,
+    position: 'Lead SDE, Alchemist AI',
+    twitterUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/in/debayan-pradhan-b138641b4/',
     githubUrl: '',
   },
   {
