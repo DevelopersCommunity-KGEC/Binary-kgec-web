@@ -14,6 +14,7 @@ import BinayGupta from '../../public/mentors/BinayGupta.jpeg';
 import DebayanPradhan from '../../public/mentors/DebayanPradhan.png';
 import KrishnenduDakshi from '../../public/mentors/KrishnenduDakshi.jpg';
 import DeepBera from '../../public/mentors/DeepBera.jpeg';
+import SarnavoSahaSardar from '../../public/mentors/SarnavoSahaSardar.jpeg';
 
 export const mentors = [
   {
@@ -86,6 +87,14 @@ export const mentors = [
     position: 'Lead SDE, Alchemist AI',
     twitterUrl: '',
     linkedinUrl: 'https://www.linkedin.com/in/debayan-pradhan-b138641b4/',
+    githubUrl: '',
+  },
+  {
+    name: 'Sarnavo Saha Sardar',
+    imageUrl: SarnavoSahaSardar,
+    position: 'Member of Team1, Avalanche',
+    twitterUrl: 'https://x.com/0xSarnavo',
+    linkedinUrl: 'https://www.linkedin.com/in/sarnavo/',
     githubUrl: '',
   },
   {
