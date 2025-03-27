@@ -1,26 +1,39 @@
 import PageSection from '@/hooks/PageSection';
-// import BinaryLogo from "@/components/Animations/BinaryLogo";
-// import CountdownClock from "./CountdownClock";
-// import useTextScramble from "./text";
 import Image from 'next/image';
 import logo from '@public/images/herologo.png';
-// import { Button } from "./ui/button";
 import { motion } from 'framer-motion';
-// import TypeAnimation2 from "./Textanimation";
 import { TypeAnimation } from 'react-type-animation';
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
 import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useState } from 'react';
 
 
 const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) => void }) => {
   const isMobile = useMediaQuery("(max-width: 767px)")
+  const hackathonStartTime = "2025-03-29T10:00:00";
+  const hackathonEndTime = "2025-03-30T14:00:00";   // March 30, 2025 2:00 PM
+
+  const [hackingStarted, setHackingStarted] = useState(() => {
+    const now = new Date();
+    return now > new Date(hackathonStartTime);
+  });
+
+  const handleHackingStart = () => {
+    if (!hackingStarted) {
+      setHackingStarted(true);
+      console.log('Hacking started!');
+    } else {
+      console.log('Hacking ended!');
+    }
+  }
 
   return (
     <PageSection className="flex h-screen flex-col items-center justify-center">
       <div id="hero" ref={heroTopRef} className="flex flex-col justify-center gap-8">
         <div className="mt-16 flex w-full flex-col items-center justify-center md:mt-0 md:text-[1.5rem]">
           <motion.div
+            key={hackingStarted ? "started" : "counting"}
             className="mt-[15%] flex w-full flex-col items-center justify-center lg:mt-[10%]"
             initial={{ opacity: 1, scale: 0 }}
             animate={{ opacity: 1, scale: 0.8 }}
@@ -37,28 +50,11 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
           >
             <Image width={500} className="glitch opacity-[200]" src={logo} alt="Binary Hackathon" />
           </motion.div>
-
-          {/* <h1 className="text-green-500 text-center mt-3 font-pixelate font-bold">
-            <TypeAnimation2 text="Binary Hackathon starts in" />
-          </h1>
-          <div className="flex justify-center w-[60%]">
-            <CountdownClock />
-          </div>*/}
         </div>
-
-        {/* <div className="mt-2 flex w-full justify-center text-center md:mt-0 md:text-[1.5rem]">
-          <span className="font-pixelate font-bold text-green-500 md:text-[1.5rem]">
-            <TypeAnimation
-              sequence={[500, `Until then, why don't you have a look around...`]}
-              speed={80}
-            />
-          </span>
-        </div> */}
 
         <div className="mx-auto mt-16 flex flex-col gap-8 md:mt-0 md:flex-row">
           <div className="mt-4 flex w-full items-center justify-center md:mt-0 md:w-1/2">
             <div className="b mx-auto flex h-10 w-64 animate-bounce items-center justify-center md:h-[50px] md:animate-none">
-              {/* <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl bg-opacity-50 bg-gradient-to-br from-green-950/40 to-green-700/40 shadow-md shadow-green-700 backdrop-blur-sm backdrop-filter transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div> */}
               <a
                 href="https://hackquest.io/hackathons/BINARY?utm=dev_community_kgec"
                 target='_blank'
@@ -70,8 +66,6 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
           </div>
           <div className="flex w-full items-center justify-center md:w-1/2">
             <div className="b relative mx-auto flex h-10 w-64 items-center justify-center md:h-[50px]">
-              {/* <div className="i absolute h-10 w-64 transform cursor-pointer items-center overflow-hidden rounded-xl border-2 border-green-700 bg-transparent shadow-md shadow-green-700 transition duration-300 ease-out hover:scale-x-105 hover:scale-y-105 hover:bg-green-950 md:h-[50px]"></div> */}
-
               <a
                 href="http://discord.gg/yKcMYeMMe8"
                 target='_blank'
@@ -95,19 +89,22 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
         <div className="mt-2 w-full flex-col justify-center items-center text-center md:mt-0 font-pixelate font-bold text-green-500 md:text-[1.5rem]">
           <div className="w-full">
             <TypeAnimation
-              sequence={[1000, `Hacking starts in...`]}
+              key={hackingStarted ? "hacking-time-left" : "hacking-starts-in"}
+              sequence={[1000, hackingStarted ? "Hacking time left..." : "Hacking starts in..."]}
               speed={50}
             />
           </div>
           <div className='flex justify-center items-center mt-4'>
             <FlipClockCountdown
-              to={"2025-03-29T10:00:00"}
+              to={hackingStarted ? hackathonEndTime : hackathonStartTime}
               labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
               labelStyle={{ fontSize: 10, fontWeight: 500, textTransform: 'uppercase' }}
               digitBlockStyle={isMobile ? { width: 30, height: 50, fontSize: 25 } : { width: 40, height: 60, fontSize: 30 }}
               dividerStyle={{ color: '#171', height: 1 }}
               separatorStyle={{ color: 'green', size: '5px' }}
               duration={0.5}
+              hideOnComplete={false}
+              onComplete={handleHackingStart}
             />
           </div>
         </div>
