@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 
 import styled from 'styled-components';
 import CommunityPartners from '@/components/CommunityPartners';
+import BinaryConfetti from '@/components/BinaryConfetti';
 const Navbar = dynamic(() => import('@/components/Navbar'));
 const MaxWidthWrapper = dynamic(() => import('@/hooks/MaxWidthWrapper'));
 const Hero = dynamic(() => import('@/components/Hero'));
@@ -77,6 +78,8 @@ const Landing = () => {
           </motion.div>{' '}
         </motion.div>
       </Section>
+      <BinaryConfetti />
+
     </>
   );
 };
