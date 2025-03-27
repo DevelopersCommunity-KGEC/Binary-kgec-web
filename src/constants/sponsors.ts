@@ -49,7 +49,7 @@ export const sponsors = [
         logo: securedapp,
         link: 'https://securedapp.io/',
         alt: 'securedapp logo',
-        description: 'Security Partner', ////////////////////////////////////////////////////////////////////////////////
+        description: 'Security Partner',
       },
     ],
   },
