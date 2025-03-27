@@ -100,11 +100,16 @@ import { PartyPopper } from 'lucide-react';
 const BinaryConfetti = () => {
     const [showConfetti, setShowConfetti] = useState(true);
     const [isButtonVisible, setIsButtonVisible] = useState(true);
+    const [windowDimensions, setWindowDimensions] = useState({ width: 0, height: 0 });
 
     // Trigger initial confetti after a delay on mount
     useEffect(() => {
         const initialDelay = setTimeout(() => {
             setShowConfetti(true); // Show confetti after delay
+            setWindowDimensions({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
         }, 2000); // 2-second delay (adjustable)
 
         return () => clearTimeout(initialDelay); // Cleanup on unmount
@@ -156,7 +161,7 @@ const BinaryConfetti = () => {
                     confettiSource={{
                         x: 0,
                         y: 0,
-                        w: window.innerWidth,
+                        w: windowDimensions.width,
                         h: 0
                     }}
                     initialVelocityY={10}

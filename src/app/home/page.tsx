@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 import styled from 'styled-components';
 import CommunityPartners from '@/components/CommunityPartners';
-import BinaryConfetti from '@/components/BinaryConfetti';
+
 const Navbar = dynamic(() => import('@/components/Navbar'));
 const MaxWidthWrapper = dynamic(() => import('@/hooks/MaxWidthWrapper'));
 const Hero = dynamic(() => import('@/components/Hero'));
@@ -22,6 +22,8 @@ const Team = dynamic(() => import('@/components/Team'));
 const Sponsors = dynamic(() => import('@/components/Sponsors'));
 const FAQs = dynamic(() => import('@/components/FAQ'));
 const Footer = dynamic(() => import('@/components/Footer'));
+const BinaryConfetti = dynamic(() => import('@/components/BinaryConfetti'));
+
 const Section = styled.section<{ theme: { body: string } }>`
   background-color: ${(props) => props.theme.body};
   position: relative;
