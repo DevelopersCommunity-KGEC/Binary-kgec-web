@@ -430,8 +430,9 @@ const Mentors: React.FC = () => {
             className="ml-8 mr-8 flex items-center justify-center lg:ml-[4%] lg:mr-[4%]"
           >
             {
-              mentors.map((mentor) => (
+              mentors.map((mentor, index) => (
                 <MemberComponent
+                  key={index}
                   imgurl={{ src: mentor.imageUrl, width: 50, height: 50 }}
                   name={mentor.name}
                   position={mentor.position}
