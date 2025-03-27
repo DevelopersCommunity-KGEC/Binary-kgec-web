@@ -21,7 +21,7 @@ const DelayedComponent = () => {
   const phrases1 = ['By'];
   const phrases2 = ['DEV-Community-KGEC'];
   const phrases3 = ['In Collaboration with'];
-  const phrases4 = ['IEEE CIS Student Chapter - Kalyani'];
+  const phrases4 = ['IEEE CIS Student Chapter - Kolkata'];
   const textRef = useTextScramble(phrases1);
   const textRef2 = useTextScramble(phrases2);
   const textRef3 = useTextScramble(phrases3);
