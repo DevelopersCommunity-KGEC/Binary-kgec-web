@@ -3,6 +3,7 @@ import BinaryText from '@/components/Animations/BinaryText';
 import Image from 'next/image';
 
 import dcIMage from '@public/host/dc_transparent.png';
+import ieeeKolakata from '@public/assets/IEEE_kolkata.png';
 
 const HostedBy = () => {
   return (
@@ -56,7 +57,8 @@ const HostedBy = () => {
         <div className='col-span-1 md:col-span-2 bg-white/20 w-0.5 h-full'></div>
         <div className='col-span-5 md:col-span-4 flex flex-col items-center justify-center gap-1'>
 
-          <p className='font-pixelate text-xs md:text-base text-white text-center'>In Collaboration With <br /> IEEE CIS Student Chapter - Kalyani</p>
+          {/* <p className='font-pixelate text-xs md:text-base text-white text-center'>In Collaboration With <br /> IEEE CIS Student Chapter - Kalyani</p> */}
+          <Image src={ieeeKolakata} alt="DC" height={200} width={200} className='mb-0 object-cover' />
 
         </div>
       </div>
