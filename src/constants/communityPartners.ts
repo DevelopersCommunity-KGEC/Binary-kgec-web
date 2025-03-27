@@ -77,10 +77,10 @@ export const communityPartnersItems = [
     url: 'https://www.linkedin.com/company/sourcifyin/',
     imageUrl: Sourcify,
   },
-  {
-    url: 'https://unmask.live',
-    imageUrl: Unmasked,
-  },
+  // {
+  //   url: 'https://unmask.live',
+  //   imageUrl: Unmasked,
+  // },
   {
     url: 'https://techjantaparty.xyz',
     imageUrl: Tjp,
