@@ -11,7 +11,7 @@ import { useState } from 'react';
 
 const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) => void }) => {
   const isMobile = useMediaQuery("(max-width: 767px)")
-  const hackathonStartTime = "2025-03-29T10:00:00";
+  const hackathonStartTime = "2025-03-29T11:30:00";
   const hackathonEndTime = "2025-03-30T14:00:00";   // March 30, 2025 2:00 PM
 
   const [hackingStarted, setHackingStarted] = useState(() => {
