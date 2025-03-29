@@ -21,15 +21,19 @@ const DelayedComponent = () => {
   const phrases1 = ['By'];
   const phrases2 = ['DEV-Community-KGEC'];
   const phrases3 = ['In Collaboration with'];
-  const phrases4 = ['IEEE CIS Student Chapter - Kolkata'];
+  const phrases4 = ['IEEE CIS Kolkata Chapter'];
+  // const phrases5 = ['&'];
+  const phrases6 = ['IEEE CIS Student Branch - Kalyani'];
   const textRef = useTextScramble(phrases1);
   const textRef2 = useTextScramble(phrases2);
   const textRef3 = useTextScramble(phrases3);
   const textRef4 = useTextScramble(phrases4);
+  // const textRef5 = useTextScramble(phrases5);
+  const textRef6 = useTextScramble(phrases6);
 
   return (
     <Section>
-      <div>
+      <div className='mt-0 md:-mt-10'>
         <div className="">
           <div
             className="md:text-0.5xl lg:text-1.3xl xl:text-1.7xl shad text-center font-pixelate text-lg font-bold uppercase text-white opacity-100 sm:text-xl"
@@ -52,6 +56,18 @@ const DelayedComponent = () => {
           <div
             className="shad text-xs md:text-base mt-2 text-center font-pixelate uppercase text-white opacity-100"
             ref={textRef4}
+          ></div>
+        </div>
+        {/* <div className="">
+          <div
+            className="shad text-xs md:text-base mt-2 text-center font-pixelate uppercase text-white opacity-100"
+            ref={textRef5}
+          ></div>
+        </div> */}
+        <div className="">
+          <div
+            className="shad text-xs md:text-base mt-2 text-center font-pixelate uppercase text-white opacity-100"
+            ref={textRef6}
           ></div>
         </div>
       </div>
