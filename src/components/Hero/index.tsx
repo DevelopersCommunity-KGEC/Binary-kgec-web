@@ -8,6 +8,7 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useState } from 'react';
 
+import cicada from '@public/images/cicada_trasparent.png';
 
 const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) => void }) => {
   const isMobile = useMediaQuery("(max-width: 767px)")
@@ -30,6 +31,33 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
 
   return (
     <PageSection className="flex h-screen flex-col items-center justify-center">
+      {/* <a
+        href='https://cicada.kgec.tech'
+        target='_blank'
+        className='absolute flex justify-end w-[90%] h-200 z-10'>
+        <Image
+          src={cicada}
+          // height={auto}
+          // width={12}
+          alt="/"
+          className="px-2 w-[27%] cursor-pointer md:w-[20%] animate-ping duration-[1]"
+          style={{ transform: 'rotate(-30deg)' }}
+        />
+      </a> */}
+      <a
+        href='https://cicada.kgec.tech'
+        target='_blank'
+        className='absolute flex justify-end w-[90%] h-200 z-10'>
+        <Image
+          src={cicada}
+          alt="Flying cicada"
+          className="px-2 w-[40%] cursor-pointer md:w-[20%] animate-pulse hover:animate-bounce"
+          style={{
+            animation: 'fly 6s infinite ease-in-out',
+            transform: 'rotate(-30deg)',
+          }}
+        />
+      </a>
       <div id="hero" ref={heroTopRef} className="flex flex-col justify-center gap-8">
         <div className="mt-16 flex w-full flex-col items-center justify-center md:mt-0 md:text-[1.5rem]">
           <motion.div
