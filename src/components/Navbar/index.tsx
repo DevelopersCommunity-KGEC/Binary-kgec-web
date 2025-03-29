@@ -11,6 +11,9 @@ import NavLogo from '@public/images/thumbnail.png';
 import NavItem from './NavItem';
 import { navItems } from '@/constants/navItems';
 
+import ieeeKolakata from '@public/assets/IEEE_kolkata.png';
+
+
 const Navbar = () => {
   const glitch = useGlitch({
     playMode: 'hover',
@@ -77,13 +80,22 @@ const Navbar = () => {
     >
       <div className="flex h-full w-full items-center justify-between bg-opacity-50 px-2 backdrop-blur-xl backdrop-filter 2xl:px-16">
         <Link href="/">
-          <Image
-            src={NavLogo}
-            // height={auto}
-            // width={12}
-            alt="/"
-            className="px-2 w-[27%] cursor-pointer md:w-[20%]"
-          />
+          <div className='flex items-center justify-start gap-2'>
+            <Image
+              src={NavLogo}
+              // height={auto}
+              // width={12}
+              alt="/"
+              className="px-2 w-[27%] cursor-pointer md:w-[20%]"
+            />
+            <Image
+              src={ieeeKolakata}
+              // height={auto}
+              // width={12}
+              alt="/"
+              className="px-2 w-[27%] cursor-pointer md:w-[20%]"
+            />
+          </div>
         </Link>
         <div>
           <ul className="mr-11 hidden font-pixelate text-white md:flex w-fit">
