@@ -299,3 +299,94 @@
   right: 0%;
   left: 0%;
 }
+
+@keyframes fly {
+  0% {
+    transform: rotate(-30deg) translate(0, 0) scale(1);
+  }
+  15% {
+    transform: rotate(-20deg) translate(clamp(10px, 3vw, 20px), clamp(-15px, -3vw, -25px))
+      scale(1.05);
+  }
+  30% {
+    transform: rotate(-35deg) translate(clamp(8px, 2vw, 15px), clamp(-5px, -1vw, -10px)) scale(0.98);
+  }
+  45% {
+    transform: rotate(-25deg) translate(clamp(-8px, -2vw, -15px), clamp(-15px, -4vw, -30px))
+      scale(1.02);
+  }
+  60% {
+    transform: rotate(-40deg) translate(clamp(5px, 1.5vw, 10px), clamp(8px, 2vw, 15px)) scale(0.95);
+  }
+  75% {
+    transform: rotate(-15deg) translate(clamp(-10px, -3vw, -20px), clamp(-8px, -2vw, -15px))
+      scale(1.03);
+  }
+  90% {
+    transform: rotate(-32deg) translate(clamp(-3px, -0.5vw, -5px), clamp(3px, 0.5vw, 5px))
+      scale(0.97);
+  }
+  100% {
+    transform: rotate(-30deg) translate(0, 0) scale(1);
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  @keyframes fly {
+    0% {
+      transform: rotate(-30deg) translate(0, 0) scale(1);
+    }
+    15% {
+      transform: rotate(-20deg) translate(10px, -15px) scale(1.05);
+    }
+    30% {
+      transform: rotate(-10deg) translate(8px, -5px) scale(0.98);
+    }
+    45% {
+      transform: rotate(15deg) translate(-8px, -15px) scale(1.02);
+    }
+    60% {
+      transform: rotate(-10deg) translate(5px, 8px) scale(0.95);
+    }
+    75% {
+      transform: rotate(-25deg) translate(-10px, -8px) scale(1.03);
+    }
+    90% {
+      transform: rotate(-32deg) translate(-3px, 3px) scale(0.97);
+    }
+    100% {
+      transform: rotate(-30deg) translate(0, 0) scale(1);
+    }
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+  @keyframes fly {
+    0% {
+      transform: rotate(-30deg) translate(0, 0) scale(1);
+    }
+    15% {
+      transform: rotate(-20deg) translate(25px, -30px) scale(1.05);
+    }
+    30% {
+      transform: rotate(-35deg) translate(20px, -15px) scale(0.98);
+    }
+    45% {
+      transform: rotate(-25deg) translate(-20px, -40px) scale(1.02);
+    }
+    60% {
+      transform: rotate(-40deg) translate(15px, 20px) scale(0.95);
+    }
+    75% {
+      transform: rotate(-15deg) translate(-25px, -20px) scale(1.03);
+    }
+    90% {
+      transform: rotate(-32deg) translate(-8px, 8px) scale(0.97);
+    }
+    100% {
+      transform: rotate(-30deg) translate(0, 0) scale(1);
+    }
+  }
+}
