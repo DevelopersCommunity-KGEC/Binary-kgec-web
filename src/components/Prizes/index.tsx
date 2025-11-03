@@ -43,6 +43,9 @@ interface MemberComponentProps {
   name: string;
   TotalPrize: string;
   CashPrize: string;
+  // Optional winner details; when provided, a linked line will be shown
+  winnerName?: string;
+  winnerUrl?: string;
 }
 
 const Section = styled.section<{ theme: { body: string } }>`
@@ -101,6 +104,8 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
   name = '',
   CashPrize = ' ',
   TotalPrize = '',
+  winnerName,
+  winnerUrl,
 }) => {
   const cardX = useMotionValue(0);
   const cardY = useMotionValue(0);
@@ -191,6 +196,24 @@ const MemberComponent: React.FC<MemberComponentProps> = ({
                   {CashPrize}
                 </p>
               </div>
+              {winnerName && winnerUrl ? (
+                <div className="flex flex-col">
+                  <h1 className="text-md mx:text-sm ml-4 w-[90%] text-start font-pixelate font-semibold text-green-500">
+                    Winner
+                  </h1>
+                  <p className="mx:text-sm mb-4 ml-6 w-[90%] text-start font-pixelate text-lg font-thin text-white">
+                    <a
+                      href={winnerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-green-500 underline-offset-4 hover:text-green-400"
+                      aria-label={`Winner project link for ${winnerName}`}
+                    >
+                      {winnerName}
+                    </a>
+                  </p>
+                </div>
+              ) : null}
             </div>
           </Item>
           <div className="hover: absolute -left-2 -top-0 w-[100px] overflow-hidden border-2 border-solid border-green-700 bg-black p-6">
@@ -251,29 +274,38 @@ const Price: React.FC = () => {
 
           <ResponsiveCardContainer className="w-fit">
             <div className="lg:order-1 lg:mb-20">
+              {/* TODO: Set winnerName and winnerUrl with the actual winning team and their GitHub project URL */}
               <MemberComponent
                 imgurl={{ src: position1.default.src, width: 10, height: 10 }}
                 name="1st Prize "
                 CashPrize="25k"
                 TotalPrize="30k"
                 imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
+                winnerName="Nalayak"
+                winnerUrl="https://github.com/Akash-nath29/CodeResQ"
               />
             </div>
             <div className="mb-20 mt-20 lg:order-2 lg:mb-0 lg:mt-0">
+              {/* TODO: Set runner-up team and project URL */}
               <MemberComponent
                 imgurl={{ src: position2.default.src, width: 10, height: 10 }}
                 name="2nd Prize"
                 CashPrize="15K"
                 TotalPrize="20K"
                 imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
+                winnerName="Rule Breakers"
+                winnerUrl="https://github.com/arpankumarde/binary-hackathon"
               />
             </div>
+            {/* TODO: Set second runner-up team and project URL */}
             <MemberComponent
               imgurl={{ src: position3.default.src, width: 10, height: 10 }}
               name="3rd Prize"
               CashPrize="10K"
               TotalPrize="15K"
               imgurl2={{ src: logo.default.src, width: 10, height: 10 }}
+              winnerName="Vibe Coders"
+              winnerUrl="https://github.com/rishicds/syncora"
             />
             {/* ... other MemberComponent instances */}
           </ResponsiveCardContainer>

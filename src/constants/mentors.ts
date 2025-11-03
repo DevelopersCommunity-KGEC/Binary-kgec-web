@@ -1,20 +1,20 @@
-import SwastikBose from '../../public/mentors/SwastikBose.png';
-import SohamBanerjee from '../../public/mentors/SohamBanerjee.png';
-import PritamDeb from '../../public/mentors/PritamDeb.jpg';
-import BartickMaiti from '../../public/mentors/BartickMaiti.png';
-import ImranRoshan from '../../public/mentors/ImranRoshan.png';
-import MeghDeb from '../../public/mentors/MeghDeb.png';
-import NarendraNathChatterjee from '../../public/mentors/NarendraNathChatterjee.png';
-import SupratimDhara from '../../public/mentors/SupratimDhara.png';
-import AdvaitaSaha from '../../public/mentors/AdvaitaSaha.png';
-import SanglapMridha from '../../public/mentors/SanglapMridha.png';
-import AyushThakur from '../../public/mentors/AyushThakur.png';
-import KrishnaBose from '../../public/mentors/KrishnaBose.png';
-import BinayGupta from '../../public/mentors/BinayGupta.jpeg';
-import DebayanPradhan from '../../public/mentors/DebayanPradhan.png';
-import KrishnenduDakshi from '../../public/mentors/KrishnenduDakshi.jpg';
-import DeepBera from '../../public/mentors/DeepBera.jpeg';
-import SarnavoSahaSardar from '../../public/mentors/SarnavoSahaSardar.jpeg';
+import SwastikBose from '../../public/mentors/SwastikBose.webp';
+import SohamBanerjee from '../../public/mentors/SohamBanerjee.webp';
+import PritamDeb from '../../public/mentors/PritamDeb.webp';
+import BartickMaiti from '../../public/mentors/BartickMaiti.webp';
+import ImranRoshan from '../../public/mentors/ImranRoshan.webp';
+import MeghDeb from '../../public/mentors/MeghDeb.webp';
+import NarendraNathChatterjee from '../../public/mentors/NarendraNathChatterjee.webp';
+import SupratimDhara from '../../public/mentors/SupratimDhara.webp';
+import AdvaitaSaha from '../../public/mentors/AdvaitaSaha.webp';
+import SanglapMridha from '../../public/mentors/SanglapMridha.webp';
+import AyushThakur from '../../public/mentors/AyushThakur.webp';
+import KrishnaBose from '../../public/mentors/KrishnaBose.webp';
+import BinayGupta from '../../public/mentors/BinayGupta.webp';
+import DebayanPradhan from '../../public/mentors/DebayanPradhan.webp';
+import KrishnenduDakshi from '../../public/mentors/KrishnenduDakshi.webp';
+import DeepBera from '../../public/mentors/DeepBera.webp';
+import SarnavoSahaSardar from '../../public/mentors/SarnavoSahaSardar.webp';
 
 export const mentors = [
   {
