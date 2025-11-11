@@ -119,14 +119,23 @@ export const BentoCard = ({ item }: { item: BentoItem }) => {
             >
                 {imageSrc && (
                     <div className={cn("relative h-full w-full flex-1", mediaOnly ? "" : "mb-2")}>
-                        <Image
-                            src={imageSrc}
-                            alt={imageAlt ?? "bento image"}
-                            fill
-                            className={cn("object-cover object-center", mediaOnly ? "" : "rounded-md")}
-                            sizes="(min-width: 1024px) 33vw, 50vw"
-                            priority={false}
-                        />
+                        <motion.div
+                            key={imageSrc}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <Image
+                                src={imageSrc}
+                                alt={imageAlt ?? "bento image"}
+                                fill
+                                className={cn("object-cover object-center", mediaOnly ? "" : "rounded-md")}
+                                sizes="(min-width: 1024px) 33vw, 50vw"
+                                priority={false}
+                            />
+                        </motion.div>
                         {!mediaOnly && (
                             <div className="absolute inset-0 rounded-md ring-1 ring-inset ring-black/5 dark:ring-white/5" />
                         )}
