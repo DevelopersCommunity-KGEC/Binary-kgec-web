@@ -49,9 +49,12 @@ interface TrackCardProps {
   cashPrice: string;
   isActive: boolean;
   onToggle: () => void;
+  // Optional winner info (team name and GitHub project URL)
+  winnerName?: string;
+  winnerUrl?: string;
 }
 
-const TrackCard: React.FC<TrackCardProps> = ({ title, description, icon, totalPrice, cashPrice, isActive, onToggle }) => {
+const TrackCard: React.FC<TrackCardProps> = ({ title, description, icon, totalPrice, cashPrice, isActive, onToggle, winnerName, winnerUrl }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -80,6 +83,22 @@ const TrackCard: React.FC<TrackCardProps> = ({ title, description, icon, totalPr
               </>
             )}
           </div>
+          {winnerName && winnerUrl ? (
+            <div className='w-full flex items-center justify-center'>
+              <p className="font-pixelate text-xs md:text-sm text-green-400">
+                Winner:
+                <a
+                  href={winnerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 underline decoration-green-500 underline-offset-4 hover:text-green-300"
+                  aria-label={`Winner project link for ${winnerName}`}
+                >
+                  {winnerName}
+                </a>
+              </p>
+            </div>
+          ) : null}
         </div>
       </div>
 
