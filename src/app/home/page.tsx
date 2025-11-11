@@ -17,8 +17,9 @@ const HostedBy = dynamic(() => import('@/components/HostedBy'));
 const Timeline = dynamic(() => import('@/components/Timeline'));
 const Tracks = dynamic(() => import('@/components/Tracks'));
 const Prizes = dynamic(() => import('@/components/Prizes'));
+const Gallery = dynamic(() => import('@/components/Gallery'));
 const Mentor = dynamic(() => import('@/components/Mentors'));
-const Team = dynamic(() => import('@/components/Team'));
+// const Team = dynamic(() => import('@/components/Team'));
 const Sponsors = dynamic(() => import('@/components/Sponsors'));
 const FAQs = dynamic(() => import('@/components/FAQ'));
 const Footer = dynamic(() => import('@/components/Footer'));
@@ -65,6 +66,7 @@ const Landing = () => {
             <Timeline />
             <Tracks />
             <Prizes />
+            <Gallery />
             <Mentor />
             {/* <Team/> */}
             <Sponsors />
