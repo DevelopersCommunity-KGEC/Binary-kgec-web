@@ -18,7 +18,7 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
 
   return (
     <PageSection className="flex h-screen flex-col items-center justify-center">
-      <a
+      {/* <a
         href='https://cicada.kgec.tech'
         target='_blank'
         className='absolute flex justify-end w-[90%] h-200 z-10'>
@@ -31,7 +31,7 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
             transform: 'rotate(-30deg)',
           }}
         />
-      </a>
+      </a> */}
       <div id="hero" ref={heroTopRef} className="flex flex-col justify-center gap-8">
         <div className="mt-16 flex w-full flex-col items-center justify-center md:mt-0 md:text-[1.5rem]">
           <motion.div
