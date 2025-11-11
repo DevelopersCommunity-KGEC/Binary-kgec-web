@@ -133,7 +133,8 @@ export const BentoCard = ({ item }: { item: BentoItem }) => {
                                 fill
                                 className={cn("object-cover object-center", mediaOnly ? "" : "rounded-md")}
                                 sizes="(min-width: 1024px) 33vw, 50vw"
-                                priority={false}
+                                priority={true}
+                                loading="eager"
                             />
                         </motion.div>
                         {!mediaOnly && (
