@@ -18,14 +18,16 @@ import { useState } from 'react';
 
 const Tracks = () => {
   const tracks = [
-    {
-      title: 'Environment',
-      description:
-        'Develop solutions for environmental challenges including climate change, sustainability and conservation technologies.',
-      icon: <FaTree size={30} />,
-      totalPrice: '5K',
-      cashPrice: '3K',
-    },
+    // {
+    //   title: 'Environment',
+    //   description:
+    //     'Develop solutions for environmental challenges including climate change, sustainability and conservation technologies.',
+    //   icon: <FaTree size={30} />,
+    //   totalPrice: '5K',
+    //   cashPrice: '3K',
+    //   // winnerName: '<Team Name>',
+    //   // winnerUrl: 'https://github.com/<org>/<repo>',
+    // },
     {
       title: 'Education',
       description:
@@ -33,6 +35,8 @@ const Tracks = () => {
       icon: <FaGraduationCap size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'Oxymoron',
+      winnerUrl: 'https://github.com/muskanagarwal-15/EduVox',
     },
     {
       title: 'Health',
@@ -41,6 +45,8 @@ const Tracks = () => {
       icon: <FaHeartbeat size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'Dholakpur Warriors',
+      winnerUrl: 'https://github.com/parthib2004/learnlytic-assist',
     },
     {
       title: 'Web3',
@@ -49,6 +55,8 @@ const Tracks = () => {
       icon: <FaCubes size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'Warlocks',
+      winnerUrl: 'https://github.com/mansi0xc/Wizard-s-Gambit',
     },
     {
       title: 'AI/ML & CI',
@@ -57,15 +65,19 @@ const Tracks = () => {
       icon: <FaRobot size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'ROME',
+      winnerUrl: 'https://github.com/asengupta07/RuinsOfRome',
     },
-    {
-      title: 'Cloud Computing',
-      description:
-        'Utilize Google Cloud for AI/ML, scalable computing, big data analytics, and secure cloud solutions.',
-      icon: <FaCloud size={30} />,
-      totalPrice: '200 Google Cloud Credits',
-      cashPrice: '',
-    },
+    // {
+    //   title: 'Cloud Computing',
+    //   description:
+    //     'Utilize Google Cloud for AI/ML, scalable computing, big data analytics, and secure cloud solutions.',
+    //   icon: <FaCloud size={30} />,
+    //   totalPrice: '200 Google Cloud Credits',
+    //   cashPrice: '',
+    //   // winnerName: '<Team Name>',
+    //   // winnerUrl: 'https://github.com/<org>/<repo>',
+    // },
     {
       title: 'IOT',
       description:
@@ -73,6 +85,8 @@ const Tracks = () => {
       icon: <FaMicrochip size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'Quantum Quokkas',
+      winnerUrl: 'https://github.com/Arnab582004/Sign-language-detection-and-home-automation',
     },
     {
       title: 'Open Innovation',
@@ -81,6 +95,8 @@ const Tracks = () => {
       icon: <FaLightbulb size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'Skull Crushers',
+      winnerUrl: 'https://github.com/SagnikBasak04/NeuralDetect',
     },
     {
       title: 'Best Beginners Team',
@@ -88,15 +104,19 @@ const Tracks = () => {
       icon: <FaUsers size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'HardCode',
+      winnerUrl: 'https://github.com/wraptalk/wraptalk',
     },
-    {
-      title: 'Best Girls Team',
-      description:
-        'Recognizing an all-girls team for their outstanding innovation and problem-solving skills.',
-      icon: <FaAward size={30} />,
-      totalPrice: '5K',
-      cashPrice: '3K',
-    },
+    // {
+    //   title: 'Best Girls Team',
+    //   description:
+    //     'Recognizing an all-girls team for their outstanding innovation and problem-solving skills.',
+    //   icon: <FaAward size={30} />,
+    //   totalPrice: '5K',
+    //   cashPrice: '3K',
+    //   // winnerName: '<Team Name>',
+    //   // winnerUrl: 'https://github.com/<org>/<repo>',
+    // },
     {
       title: "People's Choice",
       description:
@@ -104,6 +124,8 @@ const Tracks = () => {
       icon: <FaStar size={30} />,
       totalPrice: '5K',
       cashPrice: '3K',
+      winnerName: 'D.TECHtors',
+      winnerUrl: 'https://github.com/Animeshghosh07/BINARY',
     },
   ];
 
@@ -179,6 +201,8 @@ const Tracks = () => {
                   cashPrice={track.cashPrice}
                   isActive={activeCard === index}
                   onToggle={() => handleToggle(index)}
+                  winnerName={(track as any).winnerName}
+                  winnerUrl={(track as any).winnerUrl}
                 />
               </div>
             ))}

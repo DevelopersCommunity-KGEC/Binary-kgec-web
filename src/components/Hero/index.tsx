@@ -2,48 +2,22 @@ import PageSection from '@/hooks/PageSection';
 import Image from 'next/image';
 import logo from '@public/images/herologo.png';
 import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
-import '@leenguyen/react-flip-clock-countdown/dist/index.css';
+import { useMemo } from 'react';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { useState } from 'react';
+import Clock from './Clock';
 
 import cicada from '@public/images/cicada_trasparent.png';
+import Link from 'next/link';
 
 const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) => void }) => {
-  const isMobile = useMediaQuery("(max-width: 767px)")
+  // const isMobile = useMediaQuery("(max-width: 767px)")
   const hackathonStartTime = "2025-03-29T11:30:00";
   const hackathonEndTime = "2025-03-30T14:00:00";   // March 30, 2025 2:00 PM
 
-  const [hackingStarted, setHackingStarted] = useState(() => {
-    const now = new Date();
-    return now > new Date(hackathonStartTime);
-  });
-
-  const handleHackingStart = () => {
-    if (!hackingStarted) {
-      setHackingStarted(true);
-      console.log('Hacking started!');
-    } else {
-      console.log('Hacking ended!');
-    }
-  }
+  const glitchClockEnabled = true; // Enable glitch clock only on non-mobile devices
 
   return (
     <PageSection className="flex h-screen flex-col items-center justify-center">
-      {/* <a
-        href='https://cicada.kgec.tech'
-        target='_blank'
-        className='absolute flex justify-end w-[90%] h-200 z-10'>
-        <Image
-          src={cicada}
-          // height={auto}
-          // width={12}
-          alt="/"
-          className="px-2 w-[27%] cursor-pointer md:w-[20%] animate-ping duration-[1]"
-          style={{ transform: 'rotate(-30deg)' }}
-        />
-      </a> */}
       <a
         href='https://cicada.kgec.tech'
         target='_blank'
@@ -61,7 +35,7 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
       <div id="hero" ref={heroTopRef} className="flex flex-col justify-center gap-8">
         <div className="mt-16 flex w-full flex-col items-center justify-center md:mt-0 md:text-[1.5rem]">
           <motion.div
-            key={hackingStarted ? "started" : "counting"}
+            key="hero-logo"
             className="mt-[15%] flex w-full flex-col items-center justify-center lg:mt-[10%]"
             initial={{ opacity: 1, scale: 0 }}
             animate={{ opacity: 1, scale: 0.8 }}
@@ -83,13 +57,12 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
         <div className="mx-auto mt-16 flex flex-col gap-8 md:mt-0 md:flex-row">
           <div className="mt-4 flex w-full items-center justify-center md:mt-0 md:w-1/2">
             <div className="b mx-auto flex h-10 w-64 animate-bounce items-center justify-center md:h-[50px] md:animate-none">
-              <a
-                href="https://hackquest.io/hackathons/BINARY?utm=dev_community_kgec"
-                target='_blank'
+              <Link
+                href="/projects2k25"
                 className="flex justify-center items-center font-lg font-bold h-full w-full text-center font-pixelate text-white transform cursor-pointer overflow-hidden rounded-xl bg-opacity-50 bg-gradient-to-br from-green-950/40 to-green-700/40 shadow-md shadow-green-700 backdrop-blur-sm backdrop-filter transition duration-300 ease-out hover:scale-105 hover:bg-green-950 md:h-[50px]"
               >
-                Register Now
-              </a>
+                2k25 Projects
+              </Link>
             </div>
           </div>
           <div className="flex w-full items-center justify-center md:w-1/2">
@@ -114,28 +87,11 @@ const Hero = ({ heroTopRef }: { heroTopRef: (node?: Element | null | undefined) 
             </div>
           </div>
         </div>
-        <div className="mt-2 w-full flex-col justify-center items-center text-center md:mt-0 font-pixelate font-bold text-green-500 md:text-[1.5rem]">
-          <div className="w-full">
-            <TypeAnimation
-              key={hackingStarted ? "hacking-time-left" : "hacking-starts-in"}
-              sequence={[1000, hackingStarted ? "Hacking time left..." : "Hacking starts in..."]}
-              speed={50}
-            />
-          </div>
-          <div className='flex justify-center items-center mt-4'>
-            <FlipClockCountdown
-              to={hackingStarted ? hackathonEndTime : hackathonStartTime}
-              labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
-              labelStyle={{ fontSize: 10, fontWeight: 500, textTransform: 'uppercase' }}
-              digitBlockStyle={isMobile ? { width: 30, height: 50, fontSize: 25 } : { width: 40, height: 60, fontSize: 30 }}
-              dividerStyle={{ color: '#171', height: 1 }}
-              separatorStyle={{ color: 'green', size: '5px' }}
-              duration={0.5}
-              hideOnComplete={false}
-              onComplete={handleHackingStart}
-            />
-          </div>
-        </div>
+        {/* <Clock
+          enableGlitchClock={glitchClockEnabled}
+          startTime={hackathonStartTime}
+          endTime={hackathonEndTime}
+        /> */}
       </div>
     </PageSection>
   );
