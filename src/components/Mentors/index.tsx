@@ -395,7 +395,7 @@ const Mentors: React.FC = () => {
           <div className="shad relative w-full overflow-x-hidden pt-5 text-xl sm:hidden">
             <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold uppercase md:w-max md:max-w-max md:pt-0">
               <span className="flex-none pl-1 font-bold tracking-wider text-green-500 opacity-85">
-                05.
+                06.
               </span>
               <span className="flex-none pl-2 font-bold tracking-wider text-gray-200 opacity-85">
                 Mentors
@@ -409,7 +409,7 @@ const Mentors: React.FC = () => {
           <div className="shad relative hidden w-full overflow-x-hidden pt-5 sm:block">
             <h2 className="relative mx-0 mb-10 flex max-w-sm flex-row pt-4 text-left font-pixelate font-bold md:w-max md:max-w-max md:pt-0">
               <span className="flex-none pl-4 font-bold tracking-wider text-green-500 opacity-85">
-                05.
+                06.
               </span>
               <span className="flex-none pl-4 font-bold tracking-wider text-gray-200 opacity-85">
                 Mentors
